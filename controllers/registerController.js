@@ -22,7 +22,7 @@ exports.initiateRegistration = catchAsync(async (req,res,next) => {
     const newRegistration = await Registration.create(registration);
     
     if(newRegistration) {
-        const link = `https://localhost:3000/emailConfirm/${newRegistration._id}`;
+        const link = `http://localhost:3000/emailConfirm/${newRegistration._id}`;
 
         const text = `Hi ${newRegistration.name}! \n Please click on the link below \n ${link}`;
 
@@ -41,4 +41,22 @@ exports.initiateRegistration = catchAsync(async (req,res,next) => {
         })
 
     return next();
+})
+
+exports.verifyEmail = catchAsync(async (req,res,next) => {
+    const regId = req.params.regId;
+    const registration = await Registration.findById(regId);
+    if(registration.emailVerified) {
+        res.status(400).json({
+            "message" : "already verified"
+        })
+        return next();
+    }
+    registration.emailVerified = true;
+    await registration.save({validateBeforeSave : false});
+    res.status(201).json({
+        "status" : "success",
+        "message" : "email verified",
+        registration
+    })
 })

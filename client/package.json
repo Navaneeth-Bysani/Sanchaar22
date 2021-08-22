@@ -1,0 +1,48 @@
+{
+  "name": "wiss-sanchaar",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.12.3",
+    "classnames": "^2.2.6",
+    "express": "^4.17.1",
+    "lodash": "^4.17.15",
+    "node-sass": "^4.13.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-ga": "^2.7.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "^3.4.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Navaneeth-Bysani/Sanchaar.git"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/cruip/open-react-template/issues"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

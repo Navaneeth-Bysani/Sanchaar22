@@ -4,7 +4,7 @@ const email = require('./../utils/email');
 const catchAsync = require('./../utils/catchAsync');
 
 exports.initiateRegistration = catchAsync(async (req,res,next) => {
-    console.log("came");
+    
     const registration = {
         email : req.body.email,
         name : req.body.name,

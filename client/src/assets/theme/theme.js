@@ -807,14 +807,14 @@ const theme = createMuiTheme({
     MuiDialogContent: {
       root: {
         position: "relative",
-        padding: "1.5rem",
+        padding: "1rem",
         flex: "1 1 auto",
       },
     },
     MuiDialogActions: {
       root: {
         display: "flex",
-        padding: "1.25rem",
+        padding: "10px",
         borderBottomRightRadius: ".4375rem",
         borderBottomLeftRadius: ".4375rem",
         flexWrap: "wrap",

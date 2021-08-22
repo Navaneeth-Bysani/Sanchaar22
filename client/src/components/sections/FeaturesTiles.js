@@ -119,7 +119,11 @@ const FeaturesTiles = ({
               );
             })}
             <Modal handleClose={handleClose} show={show}>
-              <Register workshop={workshopSelected} workshops={workshops} />
+              <Register
+                workshop={workshopSelected}
+                workshops={workshops}
+                handleClose={handleClose}
+              />
             </Modal>
             {/* <div className="tiles-item reveal-from-bottom ">
               <div className="tiles-item-inner">

@@ -20,6 +20,8 @@ import NativeSelect from "@material-ui/core/NativeSelect";
 import Input from "./../elements/Input";
 import FormHint from "../elements/FormHint";
 import axios from "axios";
+import Modal from "../elements/Modal";
+import AlertDialog from "../elements/MaterialModal";
 
 // core components
 
@@ -61,7 +63,7 @@ const BootstrapInput = withStyles((theme) => ({
   },
 }))(InputBase);
 
-function Register({ workshop, workshops }) {
+function Register({ workshop, workshops, handleClose }) {
   const classes = useStyles();
   const theme = useTheme();
 
@@ -74,6 +76,8 @@ function Register({ workshop, workshops }) {
     workshop: workshop.heading,
   });
   const [isLoading, setIsLoading] = useState(false);
+  const [showConfirm, setShowConfirm] = useState(false);
+  const [showError, setShowError] = useState(false);
 
   const submitRegistration = () => {
     setIsLoading(true);
@@ -83,10 +87,12 @@ function Register({ workshop, workshops }) {
       })
       .then((response) => {
         setIsLoading(false);
+        setShowConfirm(true);
         console.log(response);
       })
       .catch((err) => {
         setIsLoading(false);
+        setShowError(true);
         console.log(err);
       });
   };
@@ -96,6 +102,26 @@ function Register({ workshop, workshops }) {
       [event.target.name]: event.target.value,
     });
   };
+
+  const handleConfirm = () => {
+    setShowConfirm(false);
+    handleClose();
+  };
+
+  const handleError = () => {
+    setShowError(false);
+  };
+  const successRegistration = (
+    <div>
+      <h1>You have recieved an email for further instructions</h1>
+    </div>
+  );
+
+  const unSuccessfullRegistration = (
+    <div>
+      <h1>Please enter a valid email and try again</h1>
+    </div>
+  );
 
   const form = (
     <Container
@@ -306,6 +332,16 @@ function Register({ workshop, workshops }) {
           </Card>
         </Grid>
       </Grid>
+      <AlertDialog
+        show={showConfirm}
+        handleClose={handleConfirm}
+        content="Registration has been successful. An email has been sent to you for further steps"
+      ></AlertDialog>
+      <AlertDialog
+        show={showError}
+        handleClose={handleError}
+        content="Please enter a valid email for registration"
+      ></AlertDialog>
     </Container>
   );
 

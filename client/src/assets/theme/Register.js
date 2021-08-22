@@ -14,8 +14,8 @@ const componentStyles = (theme) => ({
   containerRoot: {
     minWidth: "100%",
     [theme.breakpoints.up("md")]: {
-      paddingLeft: "39px",
-      paddingRight: "39px",
+      paddingLeft: "29px",
+      paddingRight: "29px",
     },
   },
   avatar: {

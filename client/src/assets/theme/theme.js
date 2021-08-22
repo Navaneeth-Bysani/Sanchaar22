@@ -463,11 +463,9 @@ const theme = createMuiTheme({
     },
     MuiContainer: {
       root: {
-        width: "100%",
+        minWidth: "100%",
         paddingRight: "15px",
         paddingLeft: "15px",
-        marginRight: "auto",
-        marginLeft: "auto",
       },
       maxWidthXs: {
         "@media (min-width: 576px)": {
@@ -496,6 +494,7 @@ const theme = createMuiTheme({
       },
     },
     MuiGrid: {
+      flexBasis: "100%",
       item: {
         paddingRight: "15px",
         paddingLeft: "15px",
@@ -504,6 +503,7 @@ const theme = createMuiTheme({
         marginRight: "-15px",
         marginLeft: "-15px",
         width: "unset",
+        minWidth: "100%",
       },
     },
     MuiSvgIcon: {

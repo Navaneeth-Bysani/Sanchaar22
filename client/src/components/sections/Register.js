@@ -97,7 +97,7 @@ function Register({ workshop, workshops }) {
       marginTop="0rem"
       classes={{ root: classes.containerRoot }}
     >
-      <Grid container>
+      <Grid container direction="row" justify="center" alignItems="center">
         <Grid
           item
           xs={12}
@@ -169,8 +169,6 @@ function Register({ workshop, workshops }) {
                       </FormControl>
                     </FormGroup>
                   </Grid>
-                </Grid>
-                <Grid container>
                   <Grid item xs={12} lg={6}>
                     <FormGroup>
                       <FormLabel>Email</FormLabel>
@@ -195,6 +193,7 @@ function Register({ workshop, workshops }) {
                     </FormGroup>
                   </Grid>
                 </Grid>
+
                 <Grid container>
                   <Grid item xs={12} lg={6}>
                     <FormGroup>

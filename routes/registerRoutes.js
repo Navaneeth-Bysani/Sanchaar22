@@ -3,5 +3,5 @@ const registerController = require('./../controllers/registerController');
 
 const router = express.Router();
 
-router.post(`/initiatePayment`, registerController.initiatePayment);
+router.post(`/initiateRegistration`, registerController.initiateRegistration);
 module.exports = router;

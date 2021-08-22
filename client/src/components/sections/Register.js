@@ -73,16 +73,22 @@ function Register({ workshop, workshops }) {
     phoneNumber: "",
     workshop: workshop.heading,
   });
+  const [isLoading, setIsLoading] = useState(false);
 
   const submitRegistration = () => {
+    setIsLoading(true);
     axios
       .post("http://localhost:5000/api/register/initiateRegistration", values, {
         withCredentials: true,
       })
       .then((response) => {
+        setIsLoading(false);
         console.log(response);
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        setIsLoading(false);
+        console.log(err);
+      });
   };
   const handleChange = (event) => {
     setValues({
@@ -290,11 +296,12 @@ function Register({ workshop, workshops }) {
                     values.name &&
                     values.email &&
                     values.workshop &&
-                    values.phoneNumber
+                    values.phoneNumber &&
+                    !isLoading
                   )
                 }
               >
-                Register
+                {isLoading ? "Loading..." : "Register"}
               </Button>
             </Box>
           </Card>

@@ -19,6 +19,8 @@ import Typography from "@material-ui/core/Typography";
 import NativeSelect from "@material-ui/core/NativeSelect";
 import Input from "./../elements/Input";
 import FormHint from "../elements/FormHint";
+import axios from "axios";
+
 // core components
 
 import componentStyles from "./../../assets/theme/Register";
@@ -68,10 +70,20 @@ function Register({ workshop, workshops }) {
   const [values, setValues] = useState({
     name: "",
     email: "",
-    mobile: "",
+    phoneNumber: "",
     workshop: workshop.heading,
   });
-  console.log(values.workshop);
+
+  const submitRegistration = () => {
+    axios
+      .post("http://localhost:5000/api/register/initiateRegistration", values, {
+        withCredentials: true,
+      })
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((err) => console.log(err));
+  };
   const handleChange = (event) => {
     setValues({
       ...values,
@@ -199,8 +211,8 @@ function Register({ workshop, workshops }) {
                           }}
                           classes={{ input: classes.searchInput }}
                           type="text"
-                          value={values.mobile}
-                          name="mobile"
+                          value={values.phoneNumber}
+                          name="phoneNumber"
                           onChange={handleChange}
                         />
                       </FormControl>
@@ -270,6 +282,7 @@ function Register({ workshop, workshops }) {
                   marginTop: "2%",
                   marginBottom: "2%",
                 }}
+                onClick={submitRegistration}
                 classes={{ root: classes.buttonRootDark }}
                 variant="contained"
                 disabled={
@@ -277,7 +290,7 @@ function Register({ workshop, workshops }) {
                     values.name &&
                     values.email &&
                     values.workshop &&
-                    values.mobile
+                    values.phoneNumber
                   )
                 }
               >

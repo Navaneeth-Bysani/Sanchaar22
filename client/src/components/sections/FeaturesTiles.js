@@ -72,25 +72,7 @@ const FeaturesTiles = ({
     setWorkshopSelected((wokrshopSelected) => workshop);
     setShow(true);
   };
-  // const outerClasses = classNames(
-  //   "features-tiles section",
-  //   topOuterDivider && "has-top-divider",
-  //   bottomOuterDivider && "has-bottom-divider",
-  //   hasBgColor && "has-bg-color",
-  //   invertColor && "invert-color",
-  //   className
-  // );
 
-  // const innerClasses = classNames(
-  //   "features-tiles-inner section-inner pt-0",
-  //   topDivider && "has-top-divider",
-  //   bottomDivider && "has-bottom-divider"
-  // );
-
-  // const tilesClasses = classNames(
-  //   "tiles-wrap center-content",
-  //   pushLeft && "push-left"
-  // );
   const outerClasses = classNames(
     "testimonial section",
     topOuterDivider && "has-top-divider",

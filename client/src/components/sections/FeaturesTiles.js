@@ -12,34 +12,24 @@ import { set } from "react-ga";
 
 const workshops = [
   {
-    heading: "Workshop 1",
+    heading: "Automobile",
     content: "Some text about each workshop should be displayed here",
     delay: "200",
   },
   {
-    heading: "Workshop 2",
+    heading: "Machine Learning",
     content: "Some text about each workshop should be displayed here",
     delay: "400",
   },
   {
-    heading: "Workshop 3",
+    heading: "Data Science",
     content: "Some text about each workshop should be displayed here",
     delay: "600",
   },
   {
-    heading: "Workshop 4",
+    heading: "Cyber Security",
     content: "Some text about each workshop should be displayed here",
     delay: "200",
-  },
-  {
-    heading: "Workshop 5",
-    content: "Some text about each workshop should be displayed here",
-    delay: "400",
-  },
-  {
-    heading: "Workshop 6",
-    content: "Some text about each workshop should be displayed here",
-    delay: "600",
   },
 ];
 const propTypes = {

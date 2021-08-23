@@ -61,6 +61,7 @@ const Payment = () => {
     email: "",
     phoneNumber: "",
     workshop: "",
+    hasPaid: false,
   });
 
   const [showError, setShowError] = useState(false);
@@ -100,6 +101,7 @@ const Payment = () => {
             email: res.data.registration.email,
             phoneNumber: res.data.registration.phoneNumber,
             workshop: res.data.registration.workshop,
+            hasPaid: res.data.registration.paymentId ? true : false,
           });
         }
       })
@@ -113,12 +115,13 @@ const Payment = () => {
       <CardDetails details={details} />
       <div style={{ textAlign: "center", marginTop: "15px" }}>
         <Button
-          color="primary"
+          color={details.hasPaid ? "secondary" : "primary"}
           onClick={onPayClick}
           classes={{ root: classes.buttonRootDark }}
           variant="contained"
+          disabled={details.hasPaid}
         >
-          Pay
+          {!details.hasPaid ? "Pay" : "Paid"}
         </Button>
       </div>
       <AlertDialog

@@ -15,13 +15,14 @@ exports.initiateRegistration = catchAsync(async (req, res, next) => {
     workshop: req.body.workshop,
   };
 
-  // const existing = await Registration.findOne(registration);
-  // if(existing) {
-  //     res.status(404).json({
-  //         "status" : "already registered"
-  //     })
-  //     return next();
-  // }
+  const existing = await Registration.findOne(registration);
+  if (existing && existing.paymentId !== null) {
+    res.status(200).json({
+      status: "Already paid",
+      paid: true,
+    });
+    return;
+  }
 
   const newRegistration = await Registration.create(registration);
   console.log(newRegistration);
@@ -78,7 +79,7 @@ exports.makePayment = catchAsync(async (req, res, next) => {
   data.purpose = "workshop";
   data.amount = 600;
   data.buyer_name = registration.name;
-  data.redirect_url = `http://localhost:5000/api/register/callback?user_id=${registration._id}`;
+  data.redirect_url = `https://wiss-sanchaar-2022.herokuapp.com/api/register/callback?user_id=${registration._id}`;
   data.email = registration.email;
   data.phone = registration.phoneNumber;
   data.send_email - false;

@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const AppError = require("./utils/appError");
+const path = require("path");
 
 const registerRouter = require("./routes/registerRoutes");
 

@@ -24,10 +24,8 @@ exports.initiateRegistration = catchAsync(async (req, res, next) => {
   // }
 
   const newRegistration = await Registration.create(registration);
-
-  if (!newRegistration) {
-    return next(new AppError("There is some internal issue", 403));
-  } else {
+  console.log(newRegistration);
+  if (newRegistration) {
     const link = `https://wiss-sanchaar-2022.herokuapp.com/emailConfirm/${newRegistration._id}`;
 
     const text = `Hi ${newRegistration.name}! \n Please click on the link below \n ${link}`;

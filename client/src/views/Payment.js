@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-
+import AlertDialog from "../components/elements/MaterialModal";
 // import sections
 import PaymentHero from "../components/sections/PaymentHero";
 
@@ -63,8 +63,14 @@ const Payment = () => {
     workshop: "",
   });
 
+  const [showError, setShowError] = useState(false);
+
+  const handleError = () => {
+    setShowError(false);
+  };
   const classes = useStyles();
   const regId = useParams().regId;
+
   const onPayClick = () => {
     console.log(regId);
     axios
@@ -74,6 +80,7 @@ const Payment = () => {
         window.location.href = res.data.redirectUrl;
       })
       .catch((err) => {
+        setShowError(true);
         console.log(err);
       });
   };
@@ -114,6 +121,11 @@ const Payment = () => {
           Pay
         </Button>
       </div>
+      <AlertDialog
+        show={showError}
+        handleClose={handleError}
+        content="Please enter a valid phone number for registration"
+      ></AlertDialog>
     </Container>
   );
 };

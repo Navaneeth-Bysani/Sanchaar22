@@ -119,7 +119,7 @@ function Register({ workshop, workshops, handleClose }) {
 
   const alertDetails = [
     "Registration has been successful. An email has been sent to you for further steps",
-    "You have successfully registered for the course and completed the payment",
+    "You have already successfully registered for the workshop and completed the payment",
   ];
   const successRegistration = (
     <div>

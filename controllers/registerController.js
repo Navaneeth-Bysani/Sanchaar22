@@ -15,7 +15,11 @@ exports.initiateRegistration = catchAsync(async (req, res, next) => {
     workshop: req.body.workshop,
   };
 
-  const existing = await Registration.findOne(registration);
+  const existing = await Registration.findOne({
+      email : registration.email,
+      phoneNumber : registration.phoneNumber,
+      workshop : registration.workshop
+  });
   if (existing && existing.paymentId !== null) {
     res.status(200).json({
       status: "Already paid",

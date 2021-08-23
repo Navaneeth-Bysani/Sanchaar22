@@ -79,7 +79,7 @@ exports.makePayment = catchAsync(async (req, res, next) => {
   data.purpose = "workshop";
   data.amount = 600;
   data.buyer_name = registration.name;
-  data.redirect_url = `http://localhost:3000/callback?user_id=${registration._id}`;
+  data.redirect_url = `https://wiss-sanchaar-2022.herokuapp.com/callback?user_id=${registration._id}`;
   data.email = registration.email;
   data.phone = registration.phoneNumber;
   data.send_email - false;
@@ -128,8 +128,8 @@ exports.confirmPayment = catchAsync(async (req, res, next) => {
     };
     await email(emailOptions);
     res.status(200).json({
-        "status" : "success",
-        "message" : "payment is successful"
-    })
+      status: "success",
+      message: "payment is successful",
+    });
   }
 });

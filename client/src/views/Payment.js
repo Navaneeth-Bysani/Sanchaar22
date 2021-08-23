@@ -14,6 +14,7 @@ import {
   CardActions,
   Box,
   Divider,
+  Typography,
 } from "@material-ui/core";
 import componentStyles from "./../assets/theme/Register";
 
@@ -37,24 +38,19 @@ const CardDetails = (props) => {
       }}
     >
       <CardContent>
-        <p>
+        <Typography>
           <b>Name: </b> {props.details.name}
-        </p>
-        <p>
+        </Typography>
+        <Typography>
           <b>Email: </b> {props.details.email}
-        </p>
-        <p>
+        </Typography>
+        <Typography>
           <b>Phone Number: </b> {props.details.phoneNumber}
-        </p>
-        <p>
+        </Typography>
+        <Typography>
           <b>Workshop: </b>
           {props.details.workshop}
-        </p>
-        <Box
-          component={Divider}
-          marginBottom="0.8rem!important"
-          marginTop="0.8rem!important"
-        />
+        </Typography>
       </CardContent>
     </Card>
   );
@@ -72,7 +68,7 @@ const Payment = () => {
   const onPayClick = () => {
     console.log(regId);
     axios
-      .post(`http://localhost:5000/api/register/initiatePayment/${regId}`, {})
+      .post(`/api/register/initiatePayment/${regId}`, {})
       .then((res) => {
         console.log(res);
         window.location.href = res.data.redirectUrl;
@@ -85,7 +81,7 @@ const Payment = () => {
   console.log(regId);
   useEffect(() => {
     axios
-      .patch(`http://localhost:5000/api/register/verifyEmail/${regId}`, {})
+      .patch(`/api/register/verifyEmail/${regId}`, {})
       .then((res) => {
         console.log(res);
         if (

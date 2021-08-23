@@ -82,7 +82,7 @@ function Register({ workshop, workshops, handleClose }) {
   const submitRegistration = () => {
     setIsLoading(true);
     axios
-      .post("http://localhost:5000/api/register/initiateRegistration", values, {
+      .post("/api/register/initiateRegistration", values, {
         withCredentials: true,
       })
       .then((response) => {

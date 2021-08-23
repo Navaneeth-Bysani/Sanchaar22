@@ -4,6 +4,9 @@ import {useParams} from 'react-router-dom';
 
 // import sections
 import PaymentHero from '../components/sections/PaymentHero';
+
+import Button from './../components/elements/Button';
+
 // import FeaturesTiles from '../components/sections/FeaturesTiles';
 import FeaturesSplit from '../components/sections/FeaturesSplit';
 import Testimonial from '../components/sections/Testimonial';
@@ -27,7 +30,19 @@ const Payment = () => {
         phoneNumber : "",
         workshop : ""
     })
+    
     const regId = useParams().regId;
+    const onPayClick = () => {
+      console.log(regId);
+      axios.post(`http://localhost:5000/api/register/initiatePayment/${regId}`, {}).then(res => {
+        console.log(res);
+        window.location.href = res.data.redirectUrl;
+      })
+      .catch(err => {
+        console.log(err);
+      })
+    }
+
     console.log(regId);
     useEffect(() => {
       axios.patch(`http://localhost:5000/api/register/verifyEmail/${regId}`, {}).then(res=> {
@@ -48,7 +63,21 @@ const Payment = () => {
   return (
     <>
       <PaymentHero className="illustration-section-01" /> 
-      <Card details = {details}/>     
+      <Card details = {details}/>
+      <Button
+                color="primary"
+                style={{
+                  marginLeft: "40%",
+                  marginRight: "40%",
+                  marginTop: "2%",
+                  marginBottom: "2%",
+                }}
+                onClick={onPayClick}
+                // classes={{ root: classes.buttonRootDark }}
+                variant="contained"
+              >
+                Pay
+              </Button>
     </>
   );
 }

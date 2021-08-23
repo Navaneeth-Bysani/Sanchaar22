@@ -28,6 +28,10 @@ const registrationSchema = new mongoose.Schema({
     hasPaid : {
         type : Boolean,
         default : false
+    },
+    paymentId : {
+        type : String,
+        default : ""
     }
 })
 

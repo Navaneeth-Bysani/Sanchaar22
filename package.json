@@ -21,8 +21,10 @@
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "instamojo-nodejs": "^0.0.5",
     "mongoose": "^5.13.7",
     "nodemailer": "^6.6.3",
+    "url": "^0.11.0",
     "validator": "^13.6.0"
   }
 }

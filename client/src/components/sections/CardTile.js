@@ -22,6 +22,7 @@ const WorkshopCard = ({ workshop, handleOpen, className }) => {
         </div>
         <div className="features-tiles-item-content">
           <h4 className="mt-0 mb-8">{workshop.heading}</h4>
+          <a href = {workshop.pdfLink}>Know more</a>
           <p className="m-0 text-sm">{workshop.content}</p>
         </div>
         <div className="testimonial-item-footer text-xs mt-32 mb-0 has-top-divider">

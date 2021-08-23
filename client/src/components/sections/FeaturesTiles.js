@@ -13,21 +13,25 @@ import { set } from "react-ga";
 const workshops = [
   {
     heading: "Automobile",
+    pdfLink : "https://drive.google.com/file/d/19pLxsjrzCsJopiPwhRb0iUa4P1R2zgyz/view?usp=sharing",
     content: "Some text about each workshop should be displayed here",
     delay: "200",
   },
   {
     heading: "Machine Learning",
+    pdfLink : "https://drive.google.com/file/d/1t3uyg4HucYG7TiOeBWwlB4self-mhOo1/view?usp=sharing",
     content: "Some text about each workshop should be displayed here",
     delay: "400",
   },
   {
     heading: "Data Science",
+    pdfLink : "https://drive.google.com/file/d/1TG-3awhQs-c6DqrPSCo4uhkNiBODvfgg/view?usp=sharing",
     content: "Some text about each workshop should be displayed here",
     delay: "600",
   },
   {
     heading: "Cyber Security",
+    pdfLink : "https://drive.google.com/file/d/1uC-z6jomEHueZ2Tk5cyJSJUyRHCFdR-O/view?usp=sharing",
     content: "Some text about each workshop should be displayed here",
     delay: "200",
   },

@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,7 @@
     "instamojo-nodejs": "^0.0.5",
     "mongoose": "^5.13.7",
     "nodemailer": "^6.6.3",
+    "nodemon": "^2.0.12",
     "path": "^0.12.7",
     "url": "^0.11.0",
     "validator": "^13.6.0"

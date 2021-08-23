@@ -3,6 +3,7 @@ const url = require("url");
 const AppError = require("./../utils/appError");
 const Registration = require("./../models/registrationModel");
 const email = require("./../utils/email");
+const config = require("./../utils/config");
 
 const catchAsync = require("./../utils/catchAsync");
 
@@ -68,13 +69,14 @@ exports.verifyEmail = catchAsync(async (req, res, next) => {
 });
 
 exports.makePayment = catchAsync(async (req, res, next) => {
-  const API_KEY = "test_0d4aa4317eb74a7d3b278309463";
-  const AUTH_KEY = "test_042dd5f386aab14f7a7385f0a61";
+  const API_KEY = config.API_KEY;
+  const AUTH_KEY = config.AUTH_KEY;
 
   Insta.setKeys(API_KEY, AUTH_KEY);
   var data = new Insta.PaymentData();
   Insta.isSandboxMode(true);
   const registration = await Registration.findById(req.params.regId);
+  console.log(registration);
   data.purpose = "workshop";
   data.amount = 600;
   data.buyer_name = registration.name;
@@ -99,7 +101,7 @@ exports.makePayment = catchAsync(async (req, res, next) => {
       //   console.log(response);
       // console.log("response:  ", response);
       const responseData = JSON.parse(response);
-      //   console.log(responseData);
+      console.log(responseData);
       const redirectUrl = responseData.payment_request.longurl;
       console.log(redirectUrl);
       res.status(200).json({

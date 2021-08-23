@@ -100,6 +100,9 @@ exports.makePayment = catchAsync(async (req, res, next) => {
       // console.log("response:  ", response);
       const responseData = JSON.parse(response);
       console.log(responseData);
+      if (responseData === null) {
+        return next(new AppError("Error with phone number", 404));
+      }
       const redirectUrl = responseData.payment_request.longurl;
       console.log(redirectUrl);
       res.status(200).json({
@@ -123,6 +126,6 @@ exports.confirmPayment = catchAsync(async (req, res, next) => {
       text,
     };
     await email(emailOptions);
-    return res.redirect("http://localhost:3000/");
+    return res.redirect("https://wiss-sanchaar-2022.herokuapp.com/");
   }
 });

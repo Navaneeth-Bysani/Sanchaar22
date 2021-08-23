@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
   },
   "repository": {
     "type": "git",
@@ -26,5 +27,8 @@
     "nodemailer": "^6.6.3",
     "url": "^0.11.0",
     "validator": "^13.6.0"
+  },
+  "engines": {
+    "node": "12.18.3"
   }
 }

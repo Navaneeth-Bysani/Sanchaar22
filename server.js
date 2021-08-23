@@ -1,5 +1,15 @@
 const app = require('./app');
 const mongoose = require('mongoose');
+const express = require('express');
+
+require('dotenv').config();
+
+// ... other imports 
+const path = require("path")
+
+// ... other app.use middleware 
+app.use(express.static(path.join(__dirname, "client", "build")))
+
 
 const MONGO_URL = "mongodb+srv://LinX:Navaneeth@LiX@linx.xx7ku.mongodb.net/LinX?retryWrites=true&w=majority";
 
@@ -14,7 +24,14 @@ mongoose.connect(MONGO_URL, {
     console.log(err);
 })
 
-const PORT = 5000;
+
+// ...
+// Right before your app.listen(), add this:
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+});
+
+const PORT = process.env.PORT || 5000;
 const server = app.listen(PORT, () => {
     console.log(`Listening to PORT - ${PORT}`);
 })

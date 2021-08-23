@@ -24,7 +24,7 @@ exports.initiateRegistration = catchAsync(async (req, res, next) => {
   const newRegistration = await Registration.create(registration);
 
   if (newRegistration) {
-    const link = `https://wiss-sanchaar-2022.herokuapp.com/emailConfirm/${newRegistration._id}`;
+    const link = `http://localhost:3000/emailConfirm/${newRegistration._id}`;
 
     const text = `Hi ${newRegistration.name}! \n Please click on the link below \n ${link}`;
 
@@ -120,6 +120,6 @@ exports.confirmPayment = catchAsync(async (req, res, next) => {
       text,
     };
     await email(emailOptions);
-    return res.redirect("https://wiss-sanchaar-2022.herokuapp.com/");
+    return res.redirect("http://localhost:3000/");
   }
 });

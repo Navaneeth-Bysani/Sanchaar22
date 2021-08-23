@@ -1,6 +1,6 @@
 const Insta = require("instamojo-nodejs");
 const url = require("url");
-
+const AppError = require("./../utils/appError");
 const Registration = require("./../models/registrationModel");
 const email = require("./../utils/email");
 
@@ -11,6 +11,7 @@ exports.initiateRegistration = catchAsync(async (req, res, next) => {
     email: req.body.email,
     name: req.body.name,
     phoneNumber: req.body.phoneNumber,
+    workshop: req.body.workshop,
   };
 
   // const existing = await Registration.findOne(registration);
@@ -23,8 +24,10 @@ exports.initiateRegistration = catchAsync(async (req, res, next) => {
 
   const newRegistration = await Registration.create(registration);
 
-  if (newRegistration) {
-    const link = `http://localhost:3000/emailConfirm/${newRegistration._id}`;
+  if (!newRegistration) {
+    return next(new AppError("There is some internal issue", 403));
+  } else {
+    const link = `https://wiss-sanchaar-2022.herokuapp.com/emailConfirm/${newRegistration._id}`;
 
     const text = `Hi ${newRegistration.name}! \n Please click on the link below \n ${link}`;
 
@@ -36,7 +39,7 @@ exports.initiateRegistration = catchAsync(async (req, res, next) => {
     await email(options);
   }
 
-  res.status(201).json({
+  res.status(200).json({
     status: "success",
     message: "email sent successfully",
     newRegistration,
@@ -57,7 +60,7 @@ exports.verifyEmail = catchAsync(async (req, res, next) => {
   }
   registration.emailVerified = true;
   await registration.save({ validateBeforeSave: false });
-  res.status(201).json({
+  res.status(200).json({
     status: "success",
     message: "email verified",
     registration,

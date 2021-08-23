@@ -1,4 +1,7 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
+import axios from 'axios';
+import {useParams} from 'react-router-dom';
+
 // import sections
 import PaymentHero from '../components/sections/PaymentHero';
 // import FeaturesTiles from '../components/sections/FeaturesTiles';
@@ -8,7 +11,7 @@ import Cta from '../components/sections/Cta';
 
 const Card = (props) => {
     return(
-        <div style = {{"backgroundColor" : "black", "textAlign" : "center", "width" : "80%", "maxWidth" : "25rem", 
+        <div style = {{"backgroundColor" : "black", "textAlign" : "center", "width" : "80%", "maxWidth" : "40rem", 
             "margin" : "0px auto", "padding" : "10px"}}>
             <p><b>Name: </b> {props.details.name}</p>
             <p><b>Email: </b> {props.details.email}</p>
@@ -18,12 +21,30 @@ const Card = (props) => {
     )
 }
 const Payment = () => {
-    const details = {
-        name : "Bysani R Navaneeth",
-        email : "brn14@iitbbs.ac.in",
-        phoneNumber : "8985749089",
-        workshop : "Workshop-1"
-    }
+    const [details, setDetails] = useState({
+        name : "",
+        email : "",
+        phoneNumber : "",
+        workshop : ""
+    })
+    const regId = useParams().regId;
+    console.log(regId);
+    useEffect(() => {
+      axios.patch(`http://localhost:5000/api/register/verifyEmail/${regId}`, {}).then(res=> {
+        console.log(res);
+        if(res.data.message === "email verified" || res.data.message === "already verified") {
+          setDetails({
+            name : res.data.registration.name,
+            email : res.data.registration.email,
+            phoneNumber : res.data.registration.phoneNumber,
+            workshop : res.data.registration.workshop,
+          })
+        }
+      })
+      .catch(err => {
+        console.log(err);
+      })
+    }, []);
   return (
     <>
       <PaymentHero className="illustration-section-01" /> 

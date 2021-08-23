@@ -11,7 +11,7 @@ $button--color: (
   button-dark: get-color(light, 1),
   button-primary: get-color(light, 1),
   button-secondary: get-color(light, 1),
-  button-disabled: get-color(dark, 3),
+  button-disabled: get-color(dark, 4),
 );
 
 // Buttons: background color
@@ -24,7 +24,7 @@ $button--bg: (
   button-primary-hover: lighten(get-color(primary, 1), 2%),
   button-secondary: get-color(secondary, 1),
   button-secondary-hover: lighten(get-color(secondary, 1), 2%),
-  button-disabled: get-color(light, 3),
+  button-disabled: get-color(light, 4),
 );
 
 // Buttons: border color

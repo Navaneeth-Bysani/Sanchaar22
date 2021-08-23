@@ -79,6 +79,8 @@ function Register({ workshop, workshops, handleClose }) {
   const [showConfirm, setShowConfirm] = useState(false);
   const [showError, setShowError] = useState(false);
 
+  const [registered, setRegistered] = useState(false);
+
   const submitRegistration = () => {
     setIsLoading(true);
     axios
@@ -87,6 +89,7 @@ function Register({ workshop, workshops, handleClose }) {
       })
       .then((response) => {
         setIsLoading(false);
+        if (response.data.paid === true) setRegistered(true);
         setShowConfirm(true);
         console.log(response);
       })
@@ -105,12 +108,19 @@ function Register({ workshop, workshops, handleClose }) {
 
   const handleConfirm = () => {
     setShowConfirm(false);
+    setRegistered(false);
     handleClose();
   };
 
   const handleError = () => {
+    setRegistered(false);
     setShowError(false);
   };
+
+  const alertDetails = [
+    "Registration has been successful. An email has been sent to you for further steps",
+    "You have successfully registered for the course and completed the payment",
+  ];
   const successRegistration = (
     <div>
       <h1>You have recieved an email for further instructions</h1>
@@ -335,7 +345,7 @@ function Register({ workshop, workshops, handleClose }) {
       <AlertDialog
         show={showConfirm}
         handleClose={handleConfirm}
-        content="Registration has been successful. An email has been sent to you for further steps"
+        content={registered ? alertDetails[1] : alertDetails[0]}
       ></AlertDialog>
       <AlertDialog
         show={showError}

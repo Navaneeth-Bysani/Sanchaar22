@@ -15,13 +15,14 @@ exports.initiateRegistration = catchAsync(async (req, res, next) => {
     workshop: req.body.workshop,
   };
 
-  // const existing = await Registration.findOne(registration);
-  // if(existing) {
-  //     res.status(404).json({
-  //         "status" : "already registered"
-  //     })
-  //     return next();
-  // }
+  const existing = await Registration.findOne(registration);
+  if (existing && existing.paymentId !== null) {
+    res.status(200).json({
+      status: "Already paid",
+      paid: true,
+    });
+    return;
+  }
 
   const newRegistration = await Registration.create(registration);
   console.log(newRegistration);

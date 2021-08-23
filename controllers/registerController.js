@@ -40,17 +40,18 @@ exports.initiateRegistration = catchAsync(async (req,res,next) => {
             newRegistration
         })
 
-    return next();
+    return;
 })
 
 exports.verifyEmail = catchAsync(async (req,res,next) => {
     const regId = req.params.regId;
     const registration = await Registration.findById(regId);
     if(registration.emailVerified) {
-        res.status(400).json({
-            "message" : "already verified"
+        res.status(200).json({
+            "message" : "already verified",
+            registration
         })
-        return next();
+        return;
     }
     registration.emailVerified = true;
     await registration.save({validateBeforeSave : false});

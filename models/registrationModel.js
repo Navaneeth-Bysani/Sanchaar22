@@ -17,11 +17,18 @@ const registrationSchema = new mongoose.Schema({
         type : String,
         required : [true]
     },
-    emailVerificationCode : String,
     emailVerified : {
         type : Boolean,
         default : false
     },
+    workshop : {
+        type : String,
+        enum : ["Automobile", "Data Science", "Machine Learning", "Cyber Security"]
+    },
+    hasPaid : {
+        type : Boolean,
+        default : false
+    }
 })
 
 const Registration = mongoose.model('Registration', registrationSchema);

@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "75a94750fe90e67c020b0d3c2bde092b",
+    "revision": "10f40fd92a40724883065c5b20e9273c",
     "url": "/index.html"
   },
   {
-    "revision": "f73a37d175ec157aed9d",
+    "revision": "492e46499ddeb06894da",
     "url": "/static/css/main.3a328069.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.63abe99a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f73a37d175ec157aed9d",
-    "url": "/static/js/main.b06b9bc5.chunk.js"
+    "revision": "492e46499ddeb06894da",
+    "url": "/static/js/main.6b9d2a0e.chunk.js"
   },
   {
     "revision": "73bd59b160b39bbc23ce",
@@ -50,5 +50,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "a622fc5dd8adcdd27ea42218385013b4",
     "url": "/static/media/video-placeholder.a622fc5d.jpg"
+  },
+  {
+    "revision": "182f6ccb2f32de58bc4591b04fe818ce",
+    "url": "/static/media/wissLogo.182f6ccb.jpg"
   }
 ]);

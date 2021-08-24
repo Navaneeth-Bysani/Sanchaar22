@@ -22,6 +22,7 @@ import FormHint from "../elements/FormHint";
 import axios from "axios";
 import Modal from "../elements/Modal";
 import AlertDialog from "../elements/MaterialModal";
+import validator from "validator";
 
 // core components
 
@@ -81,8 +82,19 @@ function Register({ workshop, workshops, handleClose }) {
 
   const [registered, setRegistered] = useState(false);
 
+  const validatePhoneNumber = (number) => {
+    const isValidPhoneNumber = validator.isMobilePhone(number);
+    return isValidPhoneNumber;
+  };
+
   const submitRegistration = () => {
     setIsLoading(true);
+
+    if (!validatePhoneNumber(values.phoneNumber)) {
+      setShowError(true);
+      setIsLoading(false);
+      return;
+    }
     axios
       .post("/api/register/initiateRegistration", values, {
         withCredentials: true,
@@ -119,7 +131,7 @@ function Register({ workshop, workshops, handleClose }) {
 
   const alertDetails = [
     "Registration has been successful. An email has been sent to you for further steps",
-    "You have successfully registered for the course and completed the payment",
+    "You have successfully completed the payment and are registered for the workshop. Please check your email for further updates",
   ];
   const successRegistration = (
     <div>
@@ -350,7 +362,7 @@ function Register({ workshop, workshops, handleClose }) {
       <AlertDialog
         show={showError}
         handleClose={handleError}
-        content="Please enter a valid email for registration"
+        content="Please enter a valid email and mobile number for registration"
       ></AlertDialog>
     </Container>
   );

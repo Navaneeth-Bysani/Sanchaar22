@@ -79,7 +79,10 @@ exports.makePayment = catchAsync(async (req, res, next) => {
 
   Insta.setKeys(API_KEY, AUTH_KEY);
   var data = new Insta.PaymentData();
-  Insta.isSandboxMode(true);
+  if(process.env.AUTH_KEY.startsWith("test_") && process.env.API_KEY.startsWith("test_")) {
+    Insta.isSandboxMode(true);
+  }
+  
   const registration = await Registration.findById(req.params.regId);
   console.log(registration);
   data.purpose = "workshop";
@@ -110,11 +113,16 @@ exports.makePayment = catchAsync(async (req, res, next) => {
       if (responseData === null) {
         return next(new AppError("Error with phone number", 404));
       }
-      const redirectUrl = responseData.payment_request.longurl;
-      console.log(redirectUrl);
-      res.status(200).json({
-        redirectUrl,
-      });
+      if(responseData.payment_request) {
+        const redirectUrl = responseData.payment_request.longurl;
+        console.log(redirectUrl);
+        res.status(200).json({
+          redirectUrl,
+        });
+      } else {
+        return next(new AppError("There is some error with your phone Number or email id\n"));
+      }
+      
     }
   });
 });

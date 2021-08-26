@@ -103,6 +103,15 @@ const Hero = ({
               aria-controls="video-modal"
               onClick={openModal}
             > */}
+            <a href = "https://wissenaire.org/" target = "_blank">
+            <Image
+                className="has-shadow"
+                src={require("./../../assets/images/wissLogo.png")}
+                alt="Hero"
+                width={348}
+                height={252}
+            />
+            </a>
               <Image
                 className="has-shadow"
                 src={require("./../../assets/images/technovanto.png")}

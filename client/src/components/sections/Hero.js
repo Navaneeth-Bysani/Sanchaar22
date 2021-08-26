@@ -67,8 +67,8 @@ const Hero = ({
                 className="m-0 mb-32 reveal-from-bottom"
                 data-reveal-delay="400"
               >
-                Our landing page template works on all devices, so you only have
-                to set it up once, and get beautiful results forever.
+                {/* Our landing page template works on all devices, so you only have
+                to set it up once, and get beautiful results forever. */}
               </p>
               {/* <div className="reveal-from-bottom" data-reveal-delay="600">
                 <ButtonGroup>
@@ -97,20 +97,20 @@ const Hero = ({
             data-reveal-value="20px"
             data-reveal-delay="800"
           >
-            <a
+            {/* <a
               data-video="https://player.vimeo.com/video/174002812"
               href="#0"
               aria-controls="video-modal"
               onClick={openModal}
-            >
+            > */}
               <Image
                 className="has-shadow"
-                src={require("./../../assets/images/video-placeholder.jpg")}
+                src={require("./../../assets/images/technovanto.png")}
                 alt="Hero"
-                width={696}
-                height={504}
+                width={348}
+                height={252}
               />
-            </a>
+            {/* </a> */}
           </div>
           <Modal
             id="video-modal"

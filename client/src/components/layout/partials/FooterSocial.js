@@ -18,7 +18,7 @@ const FooterSocial = ({
     >
       <ul className="list-reset">
         <li>
-          <a href="https://facebook.com/">
+          <a href="https://www.facebook.com/wissenaireiitbbs/">
             <svg
               width="16"
               height="16"
@@ -31,7 +31,7 @@ const FooterSocial = ({
           </a>
         </li>
         <li>
-          <a href="https://twitter.com/">
+          <a href="https://twitter.com/wissenaire21?lang=en">
             <svg
               width="16"
               height="16"
@@ -44,7 +44,7 @@ const FooterSocial = ({
           </a>
         </li>
         <li>
-          <a href="https://google.com/">
+          <a href="https://www.instagram.com/wissenaire.iitbbs/">
             <svg
               width="16"
               height="16"

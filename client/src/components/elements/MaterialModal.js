@@ -16,10 +16,18 @@ export default function AlertDialog({ show, handleClose, content }) {
         aria-describedby="alert-dialog-description"
       >
         <DialogContent>
-          <DialogContentText>{content}</DialogContentText>
+          <DialogContentText style={{ color: "#151719", fontWeight: "500" }}>
+            {content}
+          </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button tag="a" color="light" wideMobile onClick={handleClose}>
+          <Button
+            tag="a"
+            color="light"
+            wideMobile
+            onClick={handleClose}
+            style={{ color: "green" }}
+          >
             Close
           </Button>
         </DialogActions>

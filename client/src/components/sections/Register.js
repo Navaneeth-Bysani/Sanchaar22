@@ -75,6 +75,8 @@ function Register({ workshop, workshops, handleClose }) {
     email: "",
     phoneNumber: "",
     workshop: workshop.heading,
+    college : "",
+    branch: ""
   });
   const [isLoading, setIsLoading] = useState(false);
   const [showConfirm, setShowConfirm] = useState(false);
@@ -89,7 +91,7 @@ function Register({ workshop, workshops, handleClose }) {
 
   const submitRegistration = () => {
     setIsLoading(true);
-
+    console.log(values);
     if (!validatePhoneNumber(values.phoneNumber)) {
       setShowError(true);
       setIsLoading(false);
@@ -299,6 +301,54 @@ function Register({ workshop, workshops, handleClose }) {
                     </FormGroup>
                   </Grid>
                 </Grid>
+                <Grid container>
+                  <Grid item xs={12} lg={6}>
+                    <FormGroup>
+                      <FormLabel>College</FormLabel>
+                      <FormControl
+                        variant="filled"
+                        width="100%"
+                        style={{
+                          marginBottom: "1rem!important",
+                        }}
+                        required
+                      >
+                        <Input
+                          type="text"
+                          required
+                          name="college"
+                          onChange={handleChange}
+                          value={values.college}
+                          classes={{ input: classes.searchInput }}
+                        />
+                      </FormControl>
+                    </FormGroup>
+                  </Grid>
+                  </Grid>
+                  <Grid container>
+                  <Grid item xs={12} lg={6}>
+                    <FormGroup>
+                      <FormLabel>Branch</FormLabel>
+                      <FormControl
+                        variant="filled"
+                        width="100%"
+                        style={{
+                          marginBottom: "1rem!important",
+                        }}
+                        required
+                      >
+                        <Input
+                          type="text"
+                          required
+                          name="branch"
+                          onChange={handleChange}
+                          value={values.branch}
+                          classes={{ input: classes.searchInput }}
+                        />
+                      </FormControl>
+                    </FormGroup>
+                  </Grid>
+                  </Grid>
               </div>
               <Box
                 component={Divider}

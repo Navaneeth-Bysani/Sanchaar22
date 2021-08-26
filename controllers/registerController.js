@@ -13,6 +13,8 @@ exports.initiateRegistration = catchAsync(async (req, res, next) => {
     name: req.body.name,
     phoneNumber: req.body.phoneNumber,
     workshop: req.body.workshop,
+    college : req.body.college,
+    branch : req.body.branch
   };
 
   const existing = await Registration.findOne({

@@ -130,7 +130,7 @@ exports.makePayment = catchAsync(async (req, res, next) => {
 exports.confirmPayment = catchAsync(async (req, res, next) => {
   let url_parts = url.parse(req.url, true);
   const response_data = url_parts.query;
-  if (response_data.payment_id) {
+  if (response_data.payment_id && response_data.payment_status === "Credit") {
     const registration = await Registration.findById(response_data.user_id);
     registration.paymentId = response_data.payment_id;
     await registration.save({ validateBeforeSave: false });
@@ -150,5 +150,9 @@ exports.confirmPayment = catchAsync(async (req, res, next) => {
       status: "success",
       message: "payment is successful",
     });
+  } else if(payment_request.payment_status === "Failed") {
+    return next(new AppError("Your payment was not successful! Please try again"));
+  } else {
+    return next(new AppError("Something went wrong"));
   }
 });

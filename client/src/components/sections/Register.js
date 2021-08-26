@@ -75,8 +75,8 @@ function Register({ workshop, workshops, handleClose }) {
     email: "",
     phoneNumber: "",
     workshop: workshop.heading,
-    college : "",
-    branch: ""
+    college: "",
+    branch: "",
   });
   const [isLoading, setIsLoading] = useState(false);
   const [showConfirm, setShowConfirm] = useState(false);
@@ -85,13 +85,13 @@ function Register({ workshop, workshops, handleClose }) {
   const [registered, setRegistered] = useState(false);
 
   const validatePhoneNumber = (number) => {
-    const isValidPhoneNumber = validator.isMobilePhone(number);
+    const isValidPhoneNumber = validator.isMobilePhone(number, ["en-IN"]);
     return isValidPhoneNumber;
   };
 
   const submitRegistration = () => {
     setIsLoading(true);
-    console.log(values);
+    // console.log(values);
     if (!validatePhoneNumber(values.phoneNumber)) {
       setShowError(true);
       setIsLoading(false);
@@ -324,8 +324,8 @@ function Register({ workshop, workshops, handleClose }) {
                       </FormControl>
                     </FormGroup>
                   </Grid>
-                  </Grid>
-                  <Grid container>
+                </Grid>
+                <Grid container>
                   <Grid item xs={12} lg={6}>
                     <FormGroup>
                       <FormLabel>Branch</FormLabel>
@@ -348,7 +348,7 @@ function Register({ workshop, workshops, handleClose }) {
                       </FormControl>
                     </FormGroup>
                   </Grid>
-                  </Grid>
+                </Grid>
               </div>
               <Box
                 component={Divider}

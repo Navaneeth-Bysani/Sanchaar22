@@ -17,7 +17,7 @@ const workshops = [
     content: "4th and 5th September, 2021",
     delay: "200",
     image : "feature-tile-icon-06.svg",
-    gForm : ""
+    // gForm : ""
   },
   {
     heading: "Machine Learning",
@@ -25,7 +25,7 @@ const workshops = [
     content: "28th and 29th August, 2021",
     delay: "400",
     image : "feature-tile-icon-04.svg",
-    gForm : "http://tinyurl.com/techvantoacademyworkshop"
+    // gForm : "http://tinyurl.com/techvantoacademyworkshop"
   },
   {
     heading: "Data Science",
@@ -33,7 +33,7 @@ const workshops = [
     content: "4th and 5th September, 2021",
     delay: "600",
     image : "feature-tile-icon-01.svg",
-    gForm : ""
+    // gForm : ""
   },
   {
     heading: "Cyber Security",
@@ -41,7 +41,7 @@ const workshops = [
     content: "28th and 29th August, 2021",
     delay: "200",
     image : "feature-tile-icon-03.svg",
-    gForm : "http://tinyurl.com/techvantoacademyworkshop"
+    // gForm : "http://tinyurl.com/techvantoacademyworkshop"
   },
 ];
 const propTypes = {
@@ -71,9 +71,9 @@ const FeaturesTiles = ({
   };
 
   const handleOpen = (workshop) => {
-    // setWorkshopSelected((wokrshopSelected) => workshop);
-    // setShow(true);
-    window.location.href = workshop.gForm;
+    setWorkshopSelected((wokrshopSelected) => workshop);
+    setShow(true);
+    // window.location.href = workshop.gForm;
   };
 
   const outerClasses = classNames(

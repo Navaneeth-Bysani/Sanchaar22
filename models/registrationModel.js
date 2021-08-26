@@ -25,13 +25,15 @@ const registrationSchema = new mongoose.Schema({
         type : String,
         enum : ["Automobile", "Data Science", "Machine Learning", "Cyber Security"]
     },
-    hasPaid : {
-        type : Boolean,
-        default : false
-    },
     paymentId : {
         type : String,
         default : ""
+    },
+    college : {
+        type : String
+    },
+    branch : {
+        type : String
     }
 })
 

@@ -35,7 +35,7 @@ exports.initiateRegistration = catchAsync(async (req, res, next) => {
   if (newRegistration) {
     const link = `https://wiss-sanchaar-2022.herokuapp.com/emailConfirm/${newRegistration._id}`;
 
-    const text = `Hi ${newRegistration.name}! \n Please click on the link below \n ${link}`;
+    const text = `Hi ${newRegistration.name}! \n Please click on the link below to verify your email and complete the payment \n ${link}`;
 
     const options = {
       email: newRegistration.email,
@@ -126,7 +126,12 @@ exports.confirmPayment = catchAsync(async (req, res, next) => {
     const registration = await Registration.findById(response_data.user_id);
     registration.paymentId = response_data.payment_id;
     await registration.save({ validateBeforeSave: false });
-    const text = `You have been succesfully registered for the workshop. You will be communicated about the details`;
+    const text = `You have been succesfully registered for the following workshop.\n
+    Workshop : ${registration.workshop}\n
+    Name : ${registration.name}\n
+    Email : ${registration.email}\n
+    phone Number : ${registration.phoneNumber}\n
+    \nYou will be communicated about the details`;
     const emailOptions = {
       email: registration.email,
       name: registration.name,

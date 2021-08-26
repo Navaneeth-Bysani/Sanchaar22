@@ -14,7 +14,7 @@ const workshops = [
   {
     heading: "Automobile",
     pdfLink : "https://drive.google.com/file/d/19pLxsjrzCsJopiPwhRb0iUa4P1R2zgyz/view?usp=sharing",
-    content: "4th and 5th September, 2021",
+    content: "11th and 12th September, 2021",
     delay: "200",
     image : "feature-tile-icon-06.svg",
     // gForm : ""
@@ -22,7 +22,7 @@ const workshops = [
   {
     heading: "Machine Learning",
     pdfLink : "https://drive.google.com/file/d/1t3uyg4HucYG7TiOeBWwlB4self-mhOo1/view?usp=sharing",
-    content: "28th and 29th August, 2021",
+    content: "4th and 5th September, 2021",
     delay: "400",
     image : "feature-tile-icon-04.svg",
     // gForm : "http://tinyurl.com/techvantoacademyworkshop"
@@ -30,7 +30,7 @@ const workshops = [
   {
     heading: "Data Science",
     pdfLink : "https://drive.google.com/file/d/1TG-3awhQs-c6DqrPSCo4uhkNiBODvfgg/view?usp=sharing",
-    content: "4th and 5th September, 2021",
+    content: "11th and 12th September, 2021",
     delay: "600",
     image : "feature-tile-icon-01.svg",
     // gForm : ""
@@ -38,7 +38,7 @@ const workshops = [
   {
     heading: "Cyber Security",
     pdfLink : "https://drive.google.com/file/d/1uC-z6jomEHueZ2Tk5cyJSJUyRHCFdR-O/view?usp=sharing",
-    content: "28th and 29th August, 2021",
+    content: "4th and 5th September, 2021",
     delay: "200",
     image : "feature-tile-icon-03.svg",
     // gForm : "http://tinyurl.com/techvantoacademyworkshop"

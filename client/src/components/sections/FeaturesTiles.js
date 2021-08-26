@@ -14,26 +14,30 @@ const workshops = [
   {
     heading: "Automobile",
     pdfLink : "https://drive.google.com/file/d/19pLxsjrzCsJopiPwhRb0iUa4P1R2zgyz/view?usp=sharing",
-    content: "Some text about each workshop should be displayed here",
+    content: "4th and 5th September, 2021",
     delay: "200",
+    image : "feature-tile-icon-06.svg"
   },
   {
     heading: "Machine Learning",
     pdfLink : "https://drive.google.com/file/d/1t3uyg4HucYG7TiOeBWwlB4self-mhOo1/view?usp=sharing",
-    content: "Some text about each workshop should be displayed here",
+    content: "28th and 29th August, 2021",
     delay: "400",
+    image : "feature-tile-icon-04.svg"
   },
   {
     heading: "Data Science",
     pdfLink : "https://drive.google.com/file/d/1TG-3awhQs-c6DqrPSCo4uhkNiBODvfgg/view?usp=sharing",
-    content: "Some text about each workshop should be displayed here",
+    content: "4th and 5th September, 2021",
     delay: "600",
+    image : "feature-tile-icon-01.svg"
   },
   {
     heading: "Cyber Security",
     pdfLink : "https://drive.google.com/file/d/1uC-z6jomEHueZ2Tk5cyJSJUyRHCFdR-O/view?usp=sharing",
-    content: "Some text about each workshop should be displayed here",
+    content: "28th and 29th August, 2021",
     delay: "200",
+    image : "feature-tile-icon-03.svg"
   },
 ];
 const propTypes = {
@@ -63,8 +67,9 @@ const FeaturesTiles = ({
   };
 
   const handleOpen = (workshop) => {
-    setWorkshopSelected((wokrshopSelected) => workshop);
-    setShow(true);
+    // setWorkshopSelected((wokrshopSelected) => workshop);
+    // setShow(true);
+    window.location.href = "http://tinyurl.com/techvantoacademyworkshop";
   };
 
   const outerClasses = classNames(

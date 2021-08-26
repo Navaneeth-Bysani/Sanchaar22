@@ -3,7 +3,7 @@ import Image from "../elements/Image";
 import classNames from "classnames";
 import Button from "../elements/Button";
 
-const WorkshopCard = ({ workshop, handleOpen, className }) => {
+const WorkshopCard = ({ workshop, handleOpen, className}) => {
   return (
     <div
       className="tiles-item reveal-from-bottom center-content"
@@ -13,7 +13,7 @@ const WorkshopCard = ({ workshop, handleOpen, className }) => {
         <div className="features-tiles-item-header">
           <div className="features-tiles-item-image mb-16">
             <Image
-              src={require("./../../assets/images/feature-tile-icon-05.svg")}
+              src={require(`./../../assets/images/${workshop.image}`)}
               alt="Features tile icon 05"
               width={64}
               height={64}

@@ -5,6 +5,7 @@ const path = require("path");
 const globalErrorHandler = require("./controllers/errorController");
 const registerRouter = require("./routes/registerRoutes");
 const middleware = require("./utils/middleware");
+const httpsRedirect = require('express-https-redirect');
 
 const app = express();
 app.use(cors());
@@ -13,7 +14,7 @@ app.use(express.json({ limit: "10kb" }));
 app.use(middleware.requestLogger);
 
 app.use(express.static(path.join(__dirname, "client/build")));
-
+app.use('/api/register',httpsRedirect());
 app.use(`/api/register`, registerRouter);
 
 app.get("*", (req, res, next) => {

@@ -41,6 +41,7 @@ exports.initiateRegistration = catchAsync(async (req, res, next) => {
       email: newRegistration.email,
       name: newRegistration.name,
       text,
+      subject : "email confirmation"
     };
     await email(options);
   }
@@ -144,6 +145,7 @@ exports.confirmPayment = catchAsync(async (req, res, next) => {
       email: registration.email,
       name: registration.name,
       text,
+      subject : "Payment Successful"
     };
     await email(emailOptions);
     res.status(200).json({

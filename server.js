@@ -6,7 +6,7 @@ const config = require("./utils/config");
 dotenv.config();
 
 // const MONGO_URL = "mongodb+srv://LinX:Navaneeth@LiX@linx.xx7ku.mongodb.net/LinX?retryWrites=true&w=majority";
-console.log(config.MONGODB_URI);
+// console.log(config.MONGODB_URI);
 mongoose
   .connect(config.MONGODB_URI, {
     useNewUrlParser: true,

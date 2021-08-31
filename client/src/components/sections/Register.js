@@ -98,9 +98,13 @@ function Register({ workshop, workshops, handleClose }) {
       return;
     }
     axios
-      .post("/api/register/initiateRegistration", values, {
-        withCredentials: true,
-      })
+      .post(
+        "https://wiss-sanchaar-2022.herokuapp.com/api/register/initiateRegistration",
+        values,
+        {
+          withCredentials: true,
+        }
+      )
       .then((response) => {
         setIsLoading(false);
         if (response.data.paid === true) setRegistered(true);

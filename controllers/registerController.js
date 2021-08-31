@@ -13,14 +13,14 @@ exports.initiateRegistration = catchAsync(async (req, res, next) => {
     name: req.body.name,
     phoneNumber: req.body.phoneNumber,
     workshop: req.body.workshop,
-    college : req.body.college,
-    branch : req.body.branch
+    college: req.body.college,
+    branch: req.body.branch,
   };
 
   const existing = await Registration.findOne({
-      email : registration.email,
-      phoneNumber : registration.phoneNumber,
-      workshop : registration.workshop
+    email: registration.email,
+    phoneNumber: registration.phoneNumber,
+    workshop: registration.workshop,
   });
   if (existing && existing.paymentId !== null) {
     res.status(200).json({
@@ -33,7 +33,7 @@ exports.initiateRegistration = catchAsync(async (req, res, next) => {
   const newRegistration = await Registration.create(registration);
   console.log(newRegistration);
   if (newRegistration) {
-    const link = `https://wiss-sanchaar-2022.herokuapp.com/emailConfirm/${newRegistration._id}`;
+    const link = `https://sanchaar22.wissenaire.org/emailConfirm/${newRegistration._id}`;
 
     const text = `Hi ${newRegistration.name}! \n Please click on the link below to verify your email and complete the payment \n ${link}`;
 
@@ -41,7 +41,7 @@ exports.initiateRegistration = catchAsync(async (req, res, next) => {
       email: newRegistration.email,
       name: newRegistration.name,
       text,
-      subject : "email confirmation"
+      subject: "email confirmation",
     };
     await email(options);
   }
@@ -80,16 +80,19 @@ exports.makePayment = catchAsync(async (req, res, next) => {
 
   Insta.setKeys(API_KEY, AUTH_KEY);
   var data = new Insta.PaymentData();
-  if(process.env.AUTH_KEY.startsWith("test_") && process.env.API_KEY.startsWith("test_")) {
+  if (
+    process.env.AUTH_KEY.startsWith("test_") &&
+    process.env.API_KEY.startsWith("test_")
+  ) {
     Insta.isSandboxMode(true);
   }
-  
+
   const registration = await Registration.findById(req.params.regId);
   console.log(registration);
   data.purpose = "workshop";
   data.amount = 600;
   data.buyer_name = registration.name;
-  data.redirect_url = `https://wiss-sanchaar-2022.herokuapp.com/callback?user_id=${registration._id}`;
+  data.redirect_url = `https://sanchaar22.wissenaire.org/callback?user_id=${registration._id}`;
   data.email = registration.email;
   data.phone = registration.phoneNumber;
   data.send_email - false;
@@ -114,16 +117,19 @@ exports.makePayment = catchAsync(async (req, res, next) => {
       if (responseData === null) {
         return next(new AppError("Error with phone number", 404));
       }
-      if(responseData.payment_request) {
+      if (responseData.payment_request) {
         const redirectUrl = responseData.payment_request.longurl;
         console.log(redirectUrl);
         res.status(200).json({
           redirectUrl,
         });
       } else {
-        return next(new AppError("There is some error with your phone Number or email id\n"));
+        return next(
+          new AppError(
+            "There is some error with your phone Number or email id\n"
+          )
+        );
       }
-      
     }
   });
 });
@@ -145,15 +151,17 @@ exports.confirmPayment = catchAsync(async (req, res, next) => {
       email: registration.email,
       name: registration.name,
       text,
-      subject : "Payment Successful"
+      subject: "Payment Successful",
     };
     await email(emailOptions);
     res.status(200).json({
       status: "success",
       message: "payment is successful",
     });
-  } else if(payment_request.payment_status === "Failed") {
-    return next(new AppError("Your payment was not successful! Please try again"));
+  } else if (payment_request.payment_status === "Failed") {
+    return next(
+      new AppError("Your payment was not successful! Please try again")
+    );
   } else {
     return next(new AppError("Something went wrong"));
   }

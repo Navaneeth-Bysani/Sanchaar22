@@ -41,7 +41,7 @@ exports.initiateRegistration = catchAsync(async (req, res, next) => {
       email: newRegistration.email,
       name: newRegistration.name,
       text,
-      subject: "email confirmation",
+      subject: "Email confirmation",
     };
     await email(options);
   }

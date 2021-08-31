@@ -73,14 +73,14 @@ const Payment = () => {
   const regId = useParams().regId;
 
   const onPayClick = () => {
-    console.log(regId);
+    // console.log(regId);
     axios
       .post(
         `https://wiss-sanchaar-2022.herokuapp.com/api/register/initiatePayment/${regId}`,
         {}
       )
       .then((res) => {
-        console.log(res);
+        // console.log(res);
         window.location.href = res.data.redirectUrl;
       })
       .catch((err) => {
@@ -89,7 +89,7 @@ const Payment = () => {
       });
   };
 
-  console.log(regId);
+  // console.log(regId);
   useEffect(() => {
     axios
       .patch(
@@ -97,7 +97,7 @@ const Payment = () => {
         {}
       )
       .then((res) => {
-        console.log(res);
+        // console.log(res);
         if (
           res.data.message === "email verified" ||
           res.data.message === "already verified"

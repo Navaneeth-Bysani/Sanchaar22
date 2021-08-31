@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.3a328069.chunk.css",
-    "main.js": "/static/js/main.b0154e0d.chunk.js",
-    "main.js.map": "/static/js/main.b0154e0d.chunk.js.map",
+    "main.js": "/static/js/main.3f4de164.chunk.js",
+    "main.js.map": "/static/js/main.3f4de164.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.1e1db0f9.js",
     "runtime-main.js.map": "/static/js/runtime-main.1e1db0f9.js.map",
-    "static/js/2.d5c5d81b.chunk.js": "/static/js/2.d5c5d81b.chunk.js",
-    "static/js/2.d5c5d81b.chunk.js.map": "/static/js/2.d5c5d81b.chunk.js.map",
+    "static/js/2.110c5487.chunk.js": "/static/js/2.110c5487.chunk.js",
+    "static/js/2.110c5487.chunk.js.map": "/static/js/2.110c5487.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.781b2fc6223e982f7ed7edc27c7441e5.js": "/precache-manifest.781b2fc6223e982f7ed7edc27c7441e5.js",
+    "precache-manifest.2a5243ae9ea2912b2cf62a10b88fddbc.js": "/precache-manifest.2a5243ae9ea2912b2cf62a10b88fddbc.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.3a328069.chunk.css.map": "/static/css/main.3a328069.chunk.css.map",
-    "static/js/2.d5c5d81b.chunk.js.LICENSE.txt": "/static/js/2.d5c5d81b.chunk.js.LICENSE.txt",
+    "static/js/2.110c5487.chunk.js.LICENSE.txt": "/static/js/2.110c5487.chunk.js.LICENSE.txt",
     "static/media/Brand.png": "/static/media/Brand.80c661ce.png",
     "static/media/Screenshot (149).png": "/static/media/Screenshot (149).af1cedeb.png",
     "static/media/style.scss": "/static/media/illustration-section-02.63d0555d.svg",
@@ -26,6 +26,7 @@
     "static/media/features-split-image-02.png": "/static/media/features-split-image-02.3c569239.png",
     "static/media/features-split-image-03.png": "/static/media/features-split-image-03.87e4d053.png",
     "static/media/logo.svg": "/static/media/logo.2810a88b.svg",
+    "static/media/techVantoLogo.jpeg": "/static/media/techVantoLogo.60298632.jpeg",
     "static/media/technovanto.png": "/static/media/technovanto.405f6f44.png",
     "static/media/video-placeholder.jpg": "/static/media/video-placeholder.a622fc5d.jpg",
     "static/media/wissLogo.png": "/static/media/wissLogo.17e546d8.png",
@@ -33,8 +34,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.1e1db0f9.js",
-    "static/js/2.d5c5d81b.chunk.js",
+    "static/js/2.110c5487.chunk.js",
     "static/css/main.3a328069.chunk.css",
-    "static/js/main.b0154e0d.chunk.js"
+    "static/js/main.3f4de164.chunk.js"
   ]
 }

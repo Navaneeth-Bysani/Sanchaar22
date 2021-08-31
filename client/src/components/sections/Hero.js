@@ -114,7 +114,7 @@ const Hero = ({
             </a>
             <Image
               // className="has-shadow"
-              src={require("./../../assets/images/technovanto.png")}
+              src={require("./../../assets/images/techVantoLogo.jpeg")}
               alt="Hero"
               width={348}
               height={252}

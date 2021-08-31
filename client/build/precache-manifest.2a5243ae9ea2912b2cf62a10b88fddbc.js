@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ddc1d19dada0a324fe2fab61ed6872bb",
+    "revision": "2313ddc6a4ff38ae8783584547580192",
     "url": "/index.html"
   },
   {
-    "revision": "f113c6266b0a7ee3e008",
+    "revision": "5792b61c35fc8804c2a7",
     "url": "/static/css/main.3a328069.chunk.css"
   },
   {
-    "revision": "82d8aad13cb26aaba549",
-    "url": "/static/js/2.d5c5d81b.chunk.js"
+    "revision": "dba26af9cc2912ab094b",
+    "url": "/static/js/2.110c5487.chunk.js"
   },
   {
     "revision": "7575cba1dd439de41d8109bd78cdb17a",
-    "url": "/static/js/2.d5c5d81b.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.110c5487.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f113c6266b0a7ee3e008",
-    "url": "/static/js/main.b0154e0d.chunk.js"
+    "revision": "5792b61c35fc8804c2a7",
+    "url": "/static/js/main.3f4de164.chunk.js"
   },
   {
     "revision": "73bd59b160b39bbc23ce",
@@ -86,6 +86,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "2810a88b1d6365b363caeabe678f1629",
     "url": "/static/media/logo.2810a88b.svg"
+  },
+  {
+    "revision": "602986328a61907f5483e62cd8198e3c",
+    "url": "/static/media/techVantoLogo.60298632.jpeg"
   },
   {
     "revision": "405f6f44ecbf1f969609422e1456d9a7",

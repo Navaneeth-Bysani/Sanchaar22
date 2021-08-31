@@ -109,12 +109,12 @@ function Register({ workshop, workshops, handleClose }) {
         setIsLoading(false);
         if (response.data.paid === true) setRegistered(true);
         setShowConfirm(true);
-        console.log(response);
+        // console.log(response);
       })
       .catch((err) => {
         setIsLoading(false);
         setShowError(true);
-        console.log(err);
+        // console.log(err);
       });
   };
   const handleChange = (event) => {

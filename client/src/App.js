@@ -9,8 +9,8 @@ import LayoutDefault from "./layouts/LayoutDefault";
 
 // Views
 import Home from "./views/Home";
-import Payment from "./views/Payment";
-import PaymentStatus from "./views/PaymentStatus";
+// import Payment from "./views/Payment";
+// import PaymentStatus from "./views//PaymentStatus";
 import theme from "./assets/theme/theme.js";
 // Initialize Google Analytics
 // ReactGA.initialize(process.env.REACT_APP_GA_CODE);
@@ -38,9 +38,9 @@ const App = () => {
         ref={childRef}
         children={() => (
           <Switch>
-            <AppRoute path = '/emailConfirm/:regId' component = {Payment} layout = {LayoutDefault}/>
+            {/* <AppRoute path = '/emailConfirm/:regId' component = {Payment} layout = {LayoutDefault}/> */}
             <AppRoute exact path="/" component={Home} layout={LayoutDefault} />
-            <AppRoute path="/callback" component={PaymentStatus} layout={LayoutDefault} />
+            {/* <AppRoute path="/callback" component={PaymentStatus} layout={LayoutDefault} /> */}
           </Switch>
         )}
       />

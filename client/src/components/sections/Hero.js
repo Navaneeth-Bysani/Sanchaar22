@@ -60,7 +60,7 @@ const Hero = ({
               className="mt-0 mb-16 reveal-from-bottom"
               data-reveal-delay="200"
             >
-              <span className="text-color-primary">Sanchaar</span>
+              <span className="text-color-primary">Winter Traning Program</span>
             </h1>
             <div className="container-xs">
               <p
@@ -114,7 +114,8 @@ const Hero = ({
             </a>
             <Image
               // className="has-shadow"
-              src={require("./../../assets/images/techVantoLogo.jpeg")}
+              src={require("./../../assets/images/Edu-Vitae.png")}
+              // src={require("./../../assets/images/techVantoLogo.jpeg")}
               alt="Hero"
               width={348}
               height={252}

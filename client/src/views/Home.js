@@ -18,7 +18,7 @@ const Home = () => {
       />
       <FeaturesTiles/>
       <div style = {{textAlign : "center", margin:"0 auto"}}>
-        Note: Workshops will be conducted from 10 AM to 1 PM and from 2 PM to 5 PM.
+        {/* Note: Workshops will be conducted from 10 AM to 1 PM and from 2 PM to 5 PM. */}
       </div>
       {/* <Testimonial topDivider /> */}
       {/* <Cta split /> */}

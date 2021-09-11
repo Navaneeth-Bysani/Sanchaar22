@@ -49,9 +49,9 @@ const FeaturesSplit = ({
   );
 
   const sectionHeader = {
-    title: "TechVanto Academy",
+    title: "Edu-Vitae",
     paragraph:
-      "Our sole mission is to equip the students with adequate knowledge and skills and strengthen them to establish a remarkable career in the industry. ",
+      "Join! Learn! Achieve! ",
   };
 
   return (
@@ -65,58 +65,58 @@ const FeaturesSplit = ({
                 className="split-item-content center-content-mobile reveal-from-left"
                 data-reveal-container=".split-item"
               >
-                <h3 className="mt-0 mb-12">Our Ventures Include</h3>
+                <h3 className="mt-0 mb-12">Our Traning Program Includes</h3>
 
                 <div>
                   <ul style={{ fontSize: "18px" }}>
                     <li>
-                      <span
+                      {/* <span
                         className="text-xxs text-color-primary"
                         style={{ fontSize: "18px", fontWeight: "bold" }}
                       >
                         Technical Workshops
-                      </span>{" "}
-                      <br></br>
-                      Our workshops are supported by essential hardware for the
-                      students to work on and develop a logical approach towards
-                      technology.
+                      </span>{" "} */}
+                      {/* <br></br> */}
+                      Live Online Training
                     </li>
                     <li>
-                      <span
+                      {/* <span
                         className="text-xxs text-color-primary"
                         style={{ fontSize: "18px", fontWeight: "bold" }}
                       >
                         Industrial Training
                       </span>{" "}
-                      <br></br>
-                      We offer industrial training programs of varying durations
-                      in order to make students well-familiar with the
-                      industrial trends and norms.
+                      <br></br> */}
+                      Certificate of Internship from Wissenaire, IIT Bhubaneswar
                     </li>
                     <li>
-                      <span
+                      {/* <span
                         className="text-xxs text-color-primary"
                         style={{ fontSize: "18px", fontWeight: "bold" }}
                       >
                         Software/Product Development
                       </span>{" "}
-                      <br></br>
-                      We have gained expertise in web application development,
-                      android/iOS mobile application development, website
-                      development, web designing, IoT, Machine learning and
-                      Robotics product development.
+                      <br></br> */}
+                      Practical and Project Based Learning
                     </li>
                     <li>
-                      <span
+                      {/* <span
                         className="text-xxs text-color-primary"
                         style={{ fontSize: "18px", fontWeight: "bold" }}
                       >
                         Major/Minor Projects Development
                       </span>{" "}
-                      <br></br>
-                      Our every workshop comprises of interactive practical
-                      sessions in which students get to implement the learned
-                      techniques on real-time projects and hardware.
+                      <br></br> */}
+                      Learn from IITians & Industry Experts
+                    </li>
+                    <li>
+                      Access of Offline Internship Program as per Govt. Guidelines (T&C Apply)
+                    </li>
+                    <li>
+                      Important Notes & Session Related Documents
+                    </li>
+                    <li>
+                      Flexible Timing with Morning/Evening Sessions only
                     </li>
                   </ul>
                 </div>
@@ -137,7 +137,7 @@ const FeaturesSplit = ({
               </div>
             </div>
 
-            <div className="split-item">
+            {/* <div className="split-item">
               <div
                 className="split-item-content center-content-mobile reveal-from-right"
                 data-reveal-container=".split-item"
@@ -197,7 +197,7 @@ const FeaturesSplit = ({
                   height={396}
                 />
               </div>
-            </div>
+            </div> */}
 
             {/* <div className="split-item">
               <div className="split-item-content center-content-mobile reveal-from-left" data-reveal-container=".split-item">

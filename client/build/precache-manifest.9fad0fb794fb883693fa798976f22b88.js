@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2313ddc6a4ff38ae8783584547580192",
+    "revision": "1b1ae3f3530134928a8a004a99a3ef39",
     "url": "/index.html"
   },
   {
-    "revision": "5792b61c35fc8804c2a7",
+    "revision": "2067e9ea5eb985e1bca9",
     "url": "/static/css/main.3a328069.chunk.css"
   },
   {
-    "revision": "dba26af9cc2912ab094b",
-    "url": "/static/js/2.110c5487.chunk.js"
+    "revision": "0606d7b10b68798bd7ae",
+    "url": "/static/js/2.e8c7f048.chunk.js"
   },
   {
     "revision": "7575cba1dd439de41d8109bd78cdb17a",
-    "url": "/static/js/2.110c5487.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.e8c7f048.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5792b61c35fc8804c2a7",
-    "url": "/static/js/main.3f4de164.chunk.js"
+    "revision": "2067e9ea5eb985e1bca9",
+    "url": "/static/js/main.608a61e2.chunk.js"
   },
   {
     "revision": "73bd59b160b39bbc23ce",
@@ -26,6 +26,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "80c661ceaee4ea4325aa6e4f6d9fe774",
     "url": "/static/media/Brand.80c661ce.png"
+  },
+  {
+    "revision": "547910c10f0eb6851b73121b22cd0d45",
+    "url": "/static/media/Edu-Vitae.547910c1.png"
+  },
+  {
+    "revision": "88a3cd59c41376c872ed2eaf57b3cb47",
+    "url": "/static/media/Edu-Vitae1.88a3cd59.jpg"
   },
   {
     "revision": "af1cedebe41f03ad2cb6da038d624922",

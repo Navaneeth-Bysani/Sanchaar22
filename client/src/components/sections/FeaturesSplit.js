@@ -26,6 +26,10 @@ const FeaturesSplit = ({
   imageFill,
   ...props
 }) => {
+  invertMobile = true;
+  topDivider = true;
+  imageFill = true;
+  className = "illustration-section-02";
   const outerClasses = classNames(
     "features-split section",
     topOuterDivider && "has-top-divider",

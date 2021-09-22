@@ -26,6 +26,8 @@ const Hero = ({
 }) => {
   const [videoModalActive, setVideomodalactive] = useState(false);
 
+  className = "illustration-section-01";
+
   const openModal = (e) => {
     e.preventDefault();
     setVideomodalactive(true);

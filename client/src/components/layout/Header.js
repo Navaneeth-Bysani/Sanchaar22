@@ -1,7 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 import Logo from "./partials/Logo";
 
 const propTypes = {
@@ -88,7 +89,7 @@ const Header = ({
           )}
         >
           <Logo />
-          {/* {!hideNav &&
+          {!hideNav && (
             <>
               <button
                 ref={hamburger}
@@ -102,32 +103,85 @@ const Header = ({
               </button>
               <nav
                 ref={nav}
-                className={
-                  classNames(
-                    'header-nav',
-                    isActive && 'is-active'
-                  )}>
+                className={classNames("header-nav", isActive && "is-active")}
+              >
                 <div className="header-nav-inner">
-                  <ul className={
-                    classNames(
-                      'list-reset text-xs',
+                  <ul
+                    className={classNames(
+                      "list-reset text-xs",
                       navPosition && `header-nav-${navPosition}`
-                    )}>
+                    )}
+                    style={{ cursor: "pointer" }}
+                  >
                     <li>
-                      <Link to="#workshops" onClick={closeMenu}>Workshops</Link>
+                      <Link
+                        activeClass="active"
+                        to="#edu-vitae"
+                        spy={true}
+                        smooth={true}
+                        onClick={closeMenu}
+                      >
+                        Edu-Vitae
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="#programs"
+                        spy={true}
+                        smooth={true}
+                        onClick={closeMenu}
+                      >
+                        Programs
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="#aboutUs"
+                        spy={true}
+                        smooth={true}
+                        onClick={closeMenu}
+                      >
+                        About us
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="#faculty"
+                        spy={true}
+                        smooth={true}
+                        onClick={closeMenu}
+                      >
+                        Faculty
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="#certificate"
+                        spy={true}
+                        smooth={true}
+                        onClick={closeMenu}
+                      >
+                        Certificate
+                      </Link>
                     </li>
                   </ul>
-                  {!hideSignin &&
-                    <ul
-                      className="list-reset header-nav-right"
-                    >
+                  {/* {!hideSignin && (
+                    <ul className="list-reset header-nav-right">
                       <li>
-                        <Link to="#0" className="button button-primary button-wide-mobile button-sm" onClick={closeMenu}>Sign up</Link>
+                        <Link
+                          to="#0"
+                          className="button button-primary button-wide-mobile button-sm"
+                          onClick={closeMenu}
+                        >
+                          Sign up
+                        </Link>
                       </li>
-                    </ul>}
+                    </ul>
+                  )} */}
                 </div>
               </nav>
-            </>} */}
+            </>
+          )}
         </div>
       </div>
     </header>

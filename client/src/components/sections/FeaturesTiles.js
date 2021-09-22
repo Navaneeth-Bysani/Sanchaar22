@@ -12,35 +12,85 @@ import { set } from "react-ga";
 
 const workshops = [
   {
-    heading: "Automobile",
-    pdfLink : "https://drive.google.com/file/d/19pLxsjrzCsJopiPwhRb0iUa4P1R2zgyz/view?usp=sharing",
-    content: "11th and 12th September, 2021",
+    heading: "Python",
+    pdfLink:
+      "https://drive.google.com/file/d/19pLxsjrzCsJopiPwhRb0iUa4P1R2zgyz/view?usp=sharing",
+    content: "11th,Sept 2021",
     delay: "200",
-    image : "feature-tile-icon-06.svg",
+    image: "Automobile.jpg",
     // gForm : ""
   },
   {
-    heading: "Machine Learning",
-    pdfLink : "https://drive.google.com/file/d/1t3uyg4HucYG7TiOeBWwlB4self-mhOo1/view?usp=sharing",
-    content: "4th and 5th September, 2021",
+    heading: "Java",
+    pdfLink:
+      "https://drive.google.com/file/d/1t3uyg4HucYG7TiOeBWwlB4self-mhOo1/view?usp=sharing",
+    content: "11th,Sept 2021",
     delay: "400",
-    image : "feature-tile-icon-04.svg",
+    image: "Automobile.jpg",
     // gForm : "http://tinyurl.com/techvantoacademyworkshop"
   },
   {
-    heading: "Data Science",
-    pdfLink : "https://drive.google.com/file/d/1TG-3awhQs-c6DqrPSCo4uhkNiBODvfgg/view?usp=sharing",
-    content: "11th and 12th September, 2021",
+    heading: "Machine Learning",
+    pdfLink:
+      "https://drive.google.com/file/d/1TG-3awhQs-c6DqrPSCo4uhkNiBODvfgg/view?usp=sharing",
+    content: "11th,Sept 2021",
     delay: "600",
-    image : "feature-tile-icon-01.svg",
+    image: "Automobile.jpg",
     // gForm : ""
   },
   {
-    heading: "Cyber Security",
-    pdfLink : "https://drive.google.com/file/d/1uC-z6jomEHueZ2Tk5cyJSJUyRHCFdR-O/view?usp=sharing",
-    content: "4th and 5th September, 2021",
+    heading: "Full Stack Development",
+    pdfLink:
+      "https://drive.google.com/file/d/19pLxsjrzCsJopiPwhRb0iUa4P1R2zgyz/view?usp=sharing",
+    content: "11th,Sept 2021",
     delay: "200",
-    image : "feature-tile-icon-03.svg",
+    image: "Automobile.jpg",
+    // gForm : ""
+  },
+  {
+    heading: "Android Development",
+    pdfLink:
+      "https://drive.google.com/file/d/1uC-z6jomEHueZ2Tk5cyJSJUyRHCFdR-O/view?usp=sharing",
+    content: "11th,Sept 2021",
+    delay: "400",
+    image: "Automobile.jpg",
+    // gForm : "http://tinyurl.com/techvantoacademyworkshop"
+  },
+
+  {
+    heading: "Automobile",
+    pdfLink:
+      "https://drive.google.com/file/d/1uC-z6jomEHueZ2Tk5cyJSJUyRHCFdR-O/view?usp=sharing",
+    content: "11th,Sept 2021",
+    delay: "600",
+    image: "Automobile.jpg",
+    // gForm : "http://tinyurl.com/techvantoacademyworkshop"
+  },
+  {
+    heading: "Embedded systems",
+    pdfLink:
+      "https://drive.google.com/file/d/1uC-z6jomEHueZ2Tk5cyJSJUyRHCFdR-O/view?usp=sharing",
+    content: "11th,Sept 2021",
+    delay: "200",
+    image: "Automobile.jpg",
+    // gForm : "http://tinyurl.com/techvantoacademyworkshop"
+  },
+  {
+    heading: "Cyber Security",
+    pdfLink:
+      "https://drive.google.com/file/d/1uC-z6jomEHueZ2Tk5cyJSJUyRHCFdR-O/view?usp=sharing",
+    content: "11th,Sept 2021",
+    delay: "400",
+    image: "Automobile.jpg",
+    // gForm : "http://tinyurl.com/techvantoacademyworkshop"
+  },
+  {
+    heading: "Ethical Hacking",
+    pdfLink:
+      "https://drive.google.com/file/d/1uC-z6jomEHueZ2Tk5cyJSJUyRHCFdR-O/view?usp=sharing",
+    content: "11th,Sept 2021",
+    delay: "600",
+    image: "Automobile.jpg",
     // gForm : "http://tinyurl.com/techvantoacademyworkshop"
   },
 ];
@@ -94,7 +144,7 @@ const FeaturesTiles = ({
   const tilesClasses = classNames("tiles-wrap", pushLeft && "push-left");
 
   const sectionHeader = {
-    title: "Workshops",
+    title: "Training Programs",
     paragraph: "",
   };
 

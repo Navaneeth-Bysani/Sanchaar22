@@ -2,8 +2,10 @@ import React from "react";
 import Image from "../elements/Image";
 import classNames from "classnames";
 import Button from "../elements/Button";
+import { CgCalendarDates } from "react-icons/cg";
+import { FaPhoneAlt } from "react-icons/fa";
 
-const WorkshopCard = ({ workshop, handleOpen, className}) => {
+const WorkshopCard = ({ workshop, handleOpen, className }) => {
   return (
     <div
       className="tiles-item reveal-from-bottom center-content"
@@ -15,22 +17,46 @@ const WorkshopCard = ({ workshop, handleOpen, className}) => {
             <Image
               src={require(`./../../assets/images/${workshop.image}`)}
               alt="Features tile icon 05"
-              width={64}
-              height={64}
             />
           </div>
         </div>
-        <div className="features-tiles-item-content">
-          <h4 className="mt-0 mb-8">{workshop.heading}</h4>
-          <a href={"/"} target="_blank">
-          {/* <a href={workshop.pdfLink} target="_blank"> */}
-            Know more
-          </a>
-          <p className="m-0 text-sm">{workshop.content}</p>
+        <div
+          className="features-tiles-item-content"
+          style={{ postion: "relative", marginLegt: "10px" }}
+        >
+          <h4 className="mt-0 mb-8" style={{ fontSize: "22px" }}>
+            {workshop.heading}
+          </h4>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              margin: "10px",
+            }}
+          >
+            <p style={{ display: "flex", color: "#6987AB", fontSize: "16px" }}>
+              <CgCalendarDates
+                style={{ marginLeft: "10px", marginRight: "10px" }}
+              />{" "}
+              {workshop.content}
+            </p>
+            <p style={{ display: "flex", color: "#6987AB", fontSize: "16px" }}>
+              <FaPhoneAlt style={{ marginLeft: "10px", marginRight: "10px" }} />{" "}
+              998283839
+            </p>
+          </div>
         </div>
+
         <div className="testimonial-item-footer text-xs mt-32 mb-0 has-top-divider">
           <span className="testimonial-item-link">
-            <Button tag="a" color="dark" wideMobile onClick={() => window.location.href = "http://pages.razorpay.com/witp"}>
+            <Button
+              tag="a"
+              color="dark"
+              wideMobile
+              onClick={() =>
+                (window.location.href = "http://pages.razorpay.com/witp")
+              }
+            >
               Register
             </Button>
           </span>

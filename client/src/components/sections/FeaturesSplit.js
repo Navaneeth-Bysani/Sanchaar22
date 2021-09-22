@@ -50,12 +50,15 @@ const FeaturesSplit = ({
 
   const sectionHeader = {
     title: "Edu-Vitae",
-    paragraph:
-      "Join! Learn! Achieve! ",
+    paragraph: "Join! Learn! Achieve! ",
   };
 
   return (
-    <section {...props} className={outerClasses}>
+    <section
+      {...props}
+      className={outerClasses}
+      style={{ backgroundColor: "#272a2e" }}
+    >
       <div className="container">
         <div className={innerClasses}>
           <SectionHeader data={sectionHeader} className="center-content" />
@@ -110,14 +113,11 @@ const FeaturesSplit = ({
                       Learn from IITians & Industry Experts
                     </li>
                     <li>
-                      Access of Offline Internship Program as per Govt. Guidelines (T&C Apply)
+                      Access of Offline Internship Program as per Govt.
+                      Guidelines (T&C Apply)
                     </li>
-                    <li>
-                      Important Notes & Session Related Documents
-                    </li>
-                    <li>
-                      Flexible Timing with Morning/Evening Sessions only
-                    </li>
+                    <li>Important Notes & Session Related Documents</li>
+                    <li>Flexible Timing with Morning/Evening Sessions only</li>
                   </ul>
                 </div>
               </div>

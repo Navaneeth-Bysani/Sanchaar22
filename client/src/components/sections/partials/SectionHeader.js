@@ -25,7 +25,10 @@ const SectionHeader = ({ className, data, children, tag, ...props }) => {
     <>
       {(data.title || data.paragraph) && (
         <div {...props} className={classes}>
-          <div className="container-xs">
+          <div
+            className="component-xs split-item-content center-content-mobile reveal-from-bottom"
+            style={{ top: "10px" }}
+          >
             {children}
             {data.title && (
               <Component

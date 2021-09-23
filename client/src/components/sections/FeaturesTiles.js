@@ -12,85 +12,67 @@ import { set } from "react-ga";
 
 const workshops = [
   {
-    heading: "Python",
-    pdfLink:
-      "https://drive.google.com/file/d/19pLxsjrzCsJopiPwhRb0iUa4P1R2zgyz/view?usp=sharing",
+    name: "Python",
     content: "11th,Sept 2021",
     delay: "200",
-    image: "Automobile.jpg",
+    image: "python.png",
     // gForm : ""
   },
   {
-    heading: "Java",
-    pdfLink:
-      "https://drive.google.com/file/d/1t3uyg4HucYG7TiOeBWwlB4self-mhOo1/view?usp=sharing",
+    name: "Java",
     content: "11th,Sept 2021",
     delay: "400",
-    image: "Automobile.jpg",
+    image: "java.png",
     // gForm : "http://tinyurl.com/techvantoacademyworkshop"
   },
   {
-    heading: "Machine Learning",
-    pdfLink:
-      "https://drive.google.com/file/d/1TG-3awhQs-c6DqrPSCo4uhkNiBODvfgg/view?usp=sharing",
+    name: "Machine Learning",
     content: "11th,Sept 2021",
     delay: "600",
-    image: "Automobile.jpg",
+    image: "ML.jpg",
     // gForm : ""
   },
   {
-    heading: "Full Stack Development",
-    pdfLink:
-      "https://drive.google.com/file/d/19pLxsjrzCsJopiPwhRb0iUa4P1R2zgyz/view?usp=sharing",
+    name: "Full Stack Development",
     content: "11th,Sept 2021",
     delay: "200",
-    image: "Automobile.jpg",
+    image: "web.jpg",
     // gForm : ""
   },
   {
-    heading: "Android Development",
-    pdfLink:
-      "https://drive.google.com/file/d/1uC-z6jomEHueZ2Tk5cyJSJUyRHCFdR-O/view?usp=sharing",
+    name: "Android Development",
     content: "11th,Sept 2021",
     delay: "400",
-    image: "Automobile.jpg",
+    image: "android.png",
     // gForm : "http://tinyurl.com/techvantoacademyworkshop"
   },
 
   {
-    heading: "Automobile",
-    pdfLink:
-      "https://drive.google.com/file/d/1uC-z6jomEHueZ2Tk5cyJSJUyRHCFdR-O/view?usp=sharing",
+    name: "Automobile",
     content: "11th,Sept 2021",
     delay: "600",
     image: "Automobile.jpg",
     // gForm : "http://tinyurl.com/techvantoacademyworkshop"
   },
   {
-    heading: "Embedded systems",
-    pdfLink:
-      "https://drive.google.com/file/d/1uC-z6jomEHueZ2Tk5cyJSJUyRHCFdR-O/view?usp=sharing",
+    name: "Embedded systems",
     content: "11th,Sept 2021",
     delay: "200",
-    image: "Automobile.jpg",
+    image: "embd.jpg",
     // gForm : "http://tinyurl.com/techvantoacademyworkshop"
   },
   {
-    heading: "Cyber Security",
-    pdfLink:
-      "https://drive.google.com/file/d/1uC-z6jomEHueZ2Tk5cyJSJUyRHCFdR-O/view?usp=sharing",
+    name: "Cyber Security",
     content: "11th,Sept 2021",
     delay: "400",
-    image: "Automobile.jpg",
+    image: "cyber.jpg",
     // gForm : "http://tinyurl.com/techvantoacademyworkshop"
   },
   {
-    heading: "Ethical Hacking",
-    pdfLink:
-      "https://drive.google.com/file/d/1uC-z6jomEHueZ2Tk5cyJSJUyRHCFdR-O/view?usp=sharing",
+    name: "Ethical Hacking",
     content: "11th,Sept 2021",
     delay: "600",
-    image: "Automobile.jpg",
+    image: "ethical.jpg",
     // gForm : "http://tinyurl.com/techvantoacademyworkshop"
   },
 ];
@@ -121,7 +103,7 @@ const FeaturesTiles = ({
   };
 
   const handleOpen = (workshop) => {
-    setWorkshopSelected((wokrshopSelected) => workshop);
+    setWorkshopSelected((workshopSelected) => workshop);
     setShow(true);
     // window.location.href = workshop.gForm;
   };
@@ -178,151 +160,6 @@ const FeaturesTiles = ({
                 handleClose={handleClose}
               />
             </Modal>
-            {/* <div className="tiles-item reveal-from-bottom ">
-              <div className="tiles-item-inner">
-                <div className="features-tiles-item-header center-content">
-                  <div className="features-tiles-item-image mb-16 ">
-                    <Image
-                      src={require("./../../assets/images/feature-tile-icon-01.svg")}
-                      alt="Features tile icon 01"
-                      width={64}
-                      height={64}
-                    />
-                  </div>
-                </div>
-                <div className="features-tiles-item-content ">
-                  <h4 className="mt-0 mb-8 center-content">Company 1</h4>
-                  <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehe ndrit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur.
-                  </p>
-                </div>
-                <div className="testimonial-item-footer text-xs mt-32 mb-0 has-top-divider center-content">
-                  <span className="testimonial-item-link">
-                    <a href="#0">Register</a>
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <div
-              className="tiles-item reveal-from-bottom center-content"
-              data-reveal-delay="200"
-            >
-              <div className="tiles-item-inner">
-                <div className="features-tiles-item-header">
-                  <div className="features-tiles-item-image mb-16">
-                    <Image
-                      src={require("./../../assets/images/feature-tile-icon-02.svg")}
-                      alt="Features tile icon 02"
-                      width={64}
-                      height={64}
-                    />
-                  </div>
-                </div>
-                <div className="features-tiles-item-content center-content">
-                  <h4 className="mt-0 mb-8">Company 2</h4>
-                  <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehe ndrit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur.
-                  </p>
-                </div>
-                <div className="testimonial-item-footer text-xs mt-32 mb-0 has-top-divider">
-                  <span className="testimonial-item-link">
-                    <a href="#0">Register</a>
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <div
-              className="tiles-item reveal-from-bottom center-content"
-              data-reveal-delay="400"
-            >
-              <div className="tiles-item-inner">
-                <div className="features-tiles-item-header">
-                  <div className="features-tiles-item-image mb-16">
-                    <Image
-                      src={require("./../../assets/images/feature-tile-icon-03.svg")}
-                      alt="Features tile icon 03"
-                      width={64}
-                      height={64}
-                    />
-                  </div>
-                </div>
-                <div className="features-tiles-item-content">
-                  <h4 className="mt-0 mb-8">Company 3</h4>
-                  <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehe ndrit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur.
-                  </p>
-                </div>
-                <div className="testimonial-item-footer text-xs mt-32 mb-0 has-top-divider">
-                  <span className="testimonial-item-link">
-                    <a href="#0">Register</a>
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <div className="tiles-item reveal-from-bottom center-content">
-              <div className="tiles-item-inner">
-                <div className="features-tiles-item-header">
-                  <div className="features-tiles-item-image mb-16">
-                    <Image
-                      src={require("./../../assets/images/feature-tile-icon-04.svg")}
-                      alt="Features tile icon 04"
-                      width={64}
-                      height={64}
-                    />
-                  </div>
-                </div>
-                <div className="features-tiles-item-content">
-                  <h4 className="mt-0 mb-8">Company 4</h4>
-                  <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehe ndrit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur.
-                  </p>
-                </div>
-                <div className="testimonial-item-footer text-xs mt-32 mb-0 has-top-divider">
-                  <span className="testimonial-item-link">
-                    <a href="#0">Register</a>
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <WorkshopCard />
-
-            <div
-              className="tiles-item reveal-from-bottom center-content"
-              data-reveal-delay="400"
-            >
-              <div className="tiles-item-inner">
-                <div className="features-tiles-item-header">
-                  <div className="features-tiles-item-image mb-16">
-                    <Image
-                      src={require("./../../assets/images/feature-tile-icon-06.svg")}
-                      alt="Features tile icon 06"
-                      width={64}
-                      height={64}
-                    />
-                  </div>
-                </div>
-                <div className="features-tiles-item-content">
-                  <h4 className="mt-0 mb-8">Company 6</h4>
-                  <p className="m-0 text-sm">
-                    Duis aute irure dolor in reprehe ndrit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur.
-                  </p>
-                </div>
-                <div className="testimonial-item-footer text-xs mt-32 mb-0 has-top-divider">
-                  <span className="testimonial-item-link">
-                    <a href="#0">Register</a>
-                  </span>
-                </div>
-              </div>
-            </div> */}
           </div>
         </div>
       </div>

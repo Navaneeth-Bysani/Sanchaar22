@@ -72,7 +72,12 @@ const FeaturesSplit = ({
                 {/* <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
                   Lightning fast workflow
                 </div> */}
-                <h3 className="mt-0 mb-12">About Us</h3>
+                <h3
+                  className="mt-0 mb-12"
+                  style={{ color: "#85beff", fontSize: "30px" }}
+                >
+                  About Us
+                </h3>
                 <p className="m-0">
                   Wissenaire, the annual techno-management fest of IIT
                   Bhubaneswar is one of the biggest of its kind in East India.

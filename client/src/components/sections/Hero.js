@@ -5,6 +5,7 @@ import ButtonGroup from "../elements/ButtonGroup";
 import Button from "../elements/Button";
 import Image from "../elements/Image";
 import Modal from "../elements/Modal";
+import trainingImage from "./../../assets/images/training.jpg";
 
 const propTypes = {
   ...SectionProps.types,
@@ -54,7 +55,13 @@ const Hero = ({
   );
 
   return (
-    <section {...props} className={outerClasses}>
+    <section
+      {...props}
+      className={outerClasses}
+      // style={{
+      //   backgroundImage: `url(${trainingImage})`,
+      // }}
+    >
       <div className="container-sm">
         <div className={innerClasses}>
           <div className="hero-content">
@@ -64,47 +71,13 @@ const Hero = ({
             >
               <span className="text-color-primary">Winter Traning Program</span>
             </h1>
-            <div className="container-xs">
-              <p
-                className="m-0 mb-32 reveal-from-bottom"
-                data-reveal-delay="400"
-              >
-                {/* Our landing page template works on all devices, so you only have
-                to set it up once, and get beautiful results forever. */}
-              </p>
-              {/* <div className="reveal-from-bottom" data-reveal-delay="600">
-                <ButtonGroup>
-                  <Button
-                    tag="a"
-                    color="primary"
-                    wideMobile
-                    href="https://cruip.com/"
-                  >
-                    Get started
-                  </Button>
-                  <Button
-                    tag="a"
-                    color="dark"
-                    wideMobile
-                    href="https://github.com/cruip/open-react-template/"
-                  >
-                    View on Github
-                  </Button>
-                </ButtonGroup>
-              </div> */}
-            </div>
           </div>
           <div
             className="hero-figure reveal-from-bottom illustration-element-01"
             data-reveal-value="20px"
             data-reveal-delay="800"
+            style={{ marginTop: "20px" }}
           >
-            {/* <a
-              data-video="https://player.vimeo.com/video/174002812"
-              href="#0"
-              aria-controls="video-modal"
-              onClick={openModal}
-            > */}
             <a href="https://wissenaire.org/" target="_blank">
               <Image
                 // className="has-shadow"
@@ -114,6 +87,17 @@ const Hero = ({
                 height={252}
               />
             </a>
+            <h3
+              style={{
+                fontSize: "15px",
+                margin: "0px",
+                fontWeight: "lighter",
+                fontStyle: "italic",
+              }}
+            >
+              {" "}
+              in association with{" "}
+            </h3>
             <Image
               // className="has-shadow"
               src={require("./../../assets/images/Edu-Vitae.png")}

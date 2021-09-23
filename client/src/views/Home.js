@@ -1,6 +1,7 @@
 import React from "react";
 // import sections
 import Hero from "../components/sections/Hero";
+import Heros from "../components/sections/Heros";
 import FeaturesTiles from "../components/sections/FeaturesTiles";
 import FeaturesSplit from "../components/sections/FeaturesSplit";
 import AboutUs from "../components/sections/AboutUS";
@@ -14,6 +15,7 @@ const Home = () => {
   return (
     <>
       <Hero />
+      {/* <Heros /> */}
       <FeaturesSplit id="#edu-vitae" />
       <FeaturesTiles topDivider id="#programs" />
       <AboutUs

@@ -115,7 +115,7 @@
   .modal-inner {
     margin: 0 auto;
     max-height: calc(100vh - #{$modal--outer-padding-v__desktop} * 2);
-    max-width: 80%;
+    max-width: 60%;
   }
 
   .modal-content {

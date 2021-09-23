@@ -4,7 +4,7 @@ import { makeStyles, withStyles } from "@material-ui/core/styles";
 import { useTheme } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 import InputBase from "@material-ui/core/InputBase";
-import Button from "@material-ui/core/Button";
+import Button from "../elements/Button";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import CardHeader from "@material-ui/core/CardHeader";
@@ -75,9 +75,10 @@ function Register({ workshop, workshops, handleClose }) {
     name: "",
     email: "",
     phoneNumber: "",
-    workshop: workshop.heading,
+    workshop: workshop.name,
     college: "",
     branch: "",
+    year: "",
   });
   const [isLoading, setIsLoading] = useState(false);
   const [showConfirm, setShowConfirm] = useState(false);
@@ -92,7 +93,7 @@ function Register({ workshop, workshops, handleClose }) {
 
   const submitRegistration = () => {
     setIsLoading(true);
-    // console.log(values);
+    console.log(values);
     if (!validatePhoneNumber(values.phoneNumber)) {
       setShowError(true);
       setIsLoading(false);
@@ -424,125 +425,150 @@ function Register({ workshop, workshops, handleClose }) {
 
   return (
     <>
-      <div className="login-space">
-        <div className="login">
-          <div className="group">
-            {" "}
-            <label htmlFor="user" className="label">
-              Username
-            </label>{" "}
-            <input
-              id="user"
-              type="text"
-              className="input"
-              placeholder="Enter your username"
-            />{" "}
-          </div>
-          <div className="group">
-            {" "}
-            <label htmlFor="pass" className="label">
-              Password
-            </label>{" "}
-            <input
-              id="pass"
-              type="password"
-              className="input"
-              data-type="password"
-              placeholder="Enter your password"
-            />{" "}
-          </div>
-          <div className="group">
-            {" "}
-            <input
-              id="check"
-              type="checkbox"
-              className="check"
-              defaultChecked
-            />{" "}
-            <label htmlFor="check">
-              <span className="icon" /> Keep me Signed in
-            </label>{" "}
-          </div>
-          <div className="group">
-            {" "}
-            <input
-              type="submit"
-              className="button"
-              defaultValue="Sign In"
-            />{" "}
-          </div>
-          <div className="hr" />
-          <div className="foot">
-            {" "}
-            <a href="#">Forgot Password?</a>{" "}
-          </div>
-        </div>
-        <div className="sign-up-form">
-          <div className="group">
-            {" "}
-            <label htmlFor="user" className="label">
-              Username
-            </label>{" "}
-            <input
-              id="user"
-              type="text"
-              className="input"
-              placeholder="Create your Username"
-            />{" "}
-          </div>
-          <div className="group">
-            {" "}
-            <label htmlFor="pass" className="label">
-              Password
-            </label>{" "}
-            <input
-              id="pass"
-              type="password"
-              className="input"
-              data-type="password"
-              placeholder="Create your password"
-            />{" "}
-          </div>
-          <div className="group">
-            {" "}
-            <label htmlFor="pass" className="label">
-              Repeat Password
-            </label>{" "}
-            <input
-              id="pass"
-              type="password"
-              className="input"
-              data-type="password"
-              placeholder="Repeat your password"
-            />{" "}
-          </div>
-          <div className="group">
-            {" "}
-            <label htmlFor="pass" className="label">
-              Email Address
-            </label>{" "}
-            <input
-              id="pass"
-              type="text"
-              className="input"
-              placeholder="Enter your email address"
-            />{" "}
-          </div>
-          <div className="group">
-            {" "}
-            <input
-              type="submit"
-              className="button"
-              defaultValue="Sign Up"
-            />{" "}
-          </div>
-          <div className="hr" />
-          <div className="foot">
-            {" "}
-            <label htmlFor="tab-1">Already Member?</label>{" "}
+      <div className="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
+        <div className="wrapper wrapper--w680">
+          <div className="card card-4">
+            <div className="card-body">
+              <h2 className="title" style={{ marginTop: "20px" }}>
+                Registration Form
+              </h2>
+              <form method="POST">
+                <div className="row row-space">
+                  <div className="col-2">
+                    <div className="input-group">
+                      <label className="label">Name</label>
+                      <input
+                        className="input--style-4"
+                        type="text"
+                        name="name"
+                        value={values.name}
+                        onChange={handleChange}
+                      />
+                    </div>
+                  </div>
+                  <div className="col-2">
+                    <div className="input-group">
+                      <label className="label">Phone Number</label>
+                      <input
+                        className="input--style-4"
+                        type="text"
+                        name="phoneNumber"
+                        value={values.phoneNumber}
+                        onChange={handleChange}
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="row row-space">
+                  <div className="col-2">
+                    <div className="input-group">
+                      <label className="label">Email</label>
+                      <input
+                        className="input--style-4"
+                        type="email"
+                        name="email"
+                        value={values.email}
+                        onChange={handleChange}
+                      />
+                    </div>
+                  </div>
+                  <div className="col-2">
+                    <div className="input-group">
+                      <label className="label">College</label>
+                      <input
+                        className="input--style-4"
+                        type="text"
+                        name="college"
+                        value={values.college}
+                        onChange={handleChange}
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="row row-space">
+                  <div className="col-2">
+                    <div className="input-group">
+                      <label className="label">Branch</label>
+                      <input
+                        className="input--style-4"
+                        type="text"
+                        name="branch"
+                        value={values.branch}
+                        onChange={handleChange}
+                      />
+                    </div>
+                  </div>
+                  <div className="col-2">
+                    <div className="input-group">
+                      <label className="label">Studying year</label>
+                      <input
+                        className="input--style-4"
+                        type="text"
+                        name="year"
+                        value={values.year}
+                        onChange={handleChange}
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="input-group">
+                  <div className="col-2">
+                    <div className="input-group">
+                      <label className="label">Workshop Selected</label>
+                      <input
+                        className="input--style-4"
+                        type="text"
+                        name="text"
+                        value={workshop.name}
+                        disabled
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  className="testimonial-item-footer text-xs mt-32 mb-0 has-top-divider"
+                  style={{
+                    position: "relative",
+                    display: "flex",
+                    justifyContent: "center",
+                  }}
+                >
+                  <span className="testimonial-item-link">
+                    <Button
+                      tag="a"
+                      color="dark"
+                      wideMobile
+                      disabled={
+                        !values.name ||
+                        !values.email ||
+                        !values.phoneNumber ||
+                        !values.year ||
+                        !values.college ||
+                        !values.branch
+                      }
+                      onClick={submitRegistration}
+                    >
+                      Register
+                    </Button>
+                  </span>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
+      <AlertDialog
+        show={showConfirm}
+        handleClose={handleConfirm}
+        content={registered ? alertDetails[1] : alertDetails[0]}
+      ></AlertDialog>
+      <AlertDialog
+        show={showError}
+        handleClose={handleError}
+        content="Please enter a valid email and mobile number for registration"
+      ></AlertDialog>
     </>
   );
 }

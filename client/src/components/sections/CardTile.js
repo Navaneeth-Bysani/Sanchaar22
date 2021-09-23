@@ -12,8 +12,14 @@ const WorkshopCard = ({ workshop, handleOpen, className }) => {
       data-reveal-delay={workshop.delay}
     >
       <div className="tiles-item-inner">
-        <div className="features-tiles-item-header">
-          <div className="features-tiles-item-image mb-16">
+        <div
+          className="features-tiles-item-header"
+          style={{ maxHeight: "150px" }}
+        >
+          <div
+            className="features-tiles-item-image mb-16"
+            style={{ height: "150px", width: "100%" }}
+          >
             <Image
               src={require(`./../../assets/images/${workshop.image}`)}
               alt="Features tile icon 05"
@@ -22,10 +28,10 @@ const WorkshopCard = ({ workshop, handleOpen, className }) => {
         </div>
         <div
           className="features-tiles-item-content"
-          style={{ postion: "relative", marginLegt: "10px" }}
+          style={{ postion: "relative", marginLeft: "10px", marginTop: "10px" }}
         >
           <h4 className="mt-0 mb-8" style={{ fontSize: "22px" }}>
-            {workshop.heading}
+            {workshop.name}
           </h4>
           <div
             style={{
@@ -49,14 +55,7 @@ const WorkshopCard = ({ workshop, handleOpen, className }) => {
 
         <div className="testimonial-item-footer text-xs mt-32 mb-0 has-top-divider">
           <span className="testimonial-item-link">
-            <Button
-              tag="a"
-              color="dark"
-              wideMobile
-              onClick={() =>
-                (window.location.href = "http://pages.razorpay.com/witp")
-              }
-            >
+            <Button tag="a" color="dark" wideMobile onClick={handleOpen}>
               Register
             </Button>
           </span>
@@ -67,3 +66,6 @@ const WorkshopCard = ({ workshop, handleOpen, className }) => {
 };
 
 export default WorkshopCard;
+
+// () =>
+//                 (window.location.href = "http://pages.razorpay.com/witp")

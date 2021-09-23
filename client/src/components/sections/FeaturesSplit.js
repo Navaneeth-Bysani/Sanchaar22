@@ -53,7 +53,7 @@ const FeaturesSplit = ({
   );
 
   const sectionHeader = {
-    title: "Edu-Vitae",
+    title: "Edu-Vitae Services",
     paragraph: "Join! Learn! Achieve! ",
   };
 
@@ -72,7 +72,12 @@ const FeaturesSplit = ({
                 className="split-item-content center-content-mobile reveal-from-left"
                 data-reveal-container=".split-item"
               >
-                <h3 className="mt-0 mb-12">Our Traning Program Includes</h3>
+                <h3
+                  className="mt-0 mb-12"
+                  style={{ color: "#85beff", fontSize: "30px" }}
+                >
+                  Why should you take this course
+                </h3>
 
                 <div>
                   <ul style={{ fontSize: "18px" }}>

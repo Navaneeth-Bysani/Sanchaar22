@@ -23,6 +23,7 @@ import axios from "axios";
 import Modal from "../elements/Modal";
 import AlertDialog from "../elements/MaterialModal";
 import validator from "validator";
+import "./Register.css";
 
 // core components
 
@@ -421,7 +422,129 @@ function Register({ workshop, workshops, handleClose }) {
     </Container>
   );
 
-  return <>{form}</>;
+  return (
+    <>
+      <div className="login-space">
+        <div className="login">
+          <div className="group">
+            {" "}
+            <label htmlFor="user" className="label">
+              Username
+            </label>{" "}
+            <input
+              id="user"
+              type="text"
+              className="input"
+              placeholder="Enter your username"
+            />{" "}
+          </div>
+          <div className="group">
+            {" "}
+            <label htmlFor="pass" className="label">
+              Password
+            </label>{" "}
+            <input
+              id="pass"
+              type="password"
+              className="input"
+              data-type="password"
+              placeholder="Enter your password"
+            />{" "}
+          </div>
+          <div className="group">
+            {" "}
+            <input
+              id="check"
+              type="checkbox"
+              className="check"
+              defaultChecked
+            />{" "}
+            <label htmlFor="check">
+              <span className="icon" /> Keep me Signed in
+            </label>{" "}
+          </div>
+          <div className="group">
+            {" "}
+            <input
+              type="submit"
+              className="button"
+              defaultValue="Sign In"
+            />{" "}
+          </div>
+          <div className="hr" />
+          <div className="foot">
+            {" "}
+            <a href="#">Forgot Password?</a>{" "}
+          </div>
+        </div>
+        <div className="sign-up-form">
+          <div className="group">
+            {" "}
+            <label htmlFor="user" className="label">
+              Username
+            </label>{" "}
+            <input
+              id="user"
+              type="text"
+              className="input"
+              placeholder="Create your Username"
+            />{" "}
+          </div>
+          <div className="group">
+            {" "}
+            <label htmlFor="pass" className="label">
+              Password
+            </label>{" "}
+            <input
+              id="pass"
+              type="password"
+              className="input"
+              data-type="password"
+              placeholder="Create your password"
+            />{" "}
+          </div>
+          <div className="group">
+            {" "}
+            <label htmlFor="pass" className="label">
+              Repeat Password
+            </label>{" "}
+            <input
+              id="pass"
+              type="password"
+              className="input"
+              data-type="password"
+              placeholder="Repeat your password"
+            />{" "}
+          </div>
+          <div className="group">
+            {" "}
+            <label htmlFor="pass" className="label">
+              Email Address
+            </label>{" "}
+            <input
+              id="pass"
+              type="text"
+              className="input"
+              placeholder="Enter your email address"
+            />{" "}
+          </div>
+          <div className="group">
+            {" "}
+            <input
+              type="submit"
+              className="button"
+              defaultValue="Sign Up"
+            />{" "}
+          </div>
+          <div className="hr" />
+          <div className="foot">
+            {" "}
+            <label htmlFor="tab-1">Already Member?</label>{" "}
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }
 
 export default Register;

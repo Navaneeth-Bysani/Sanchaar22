@@ -14,8 +14,8 @@ app.use(express.json({ limit: "10kb" }));
 app.use(middleware.requestLogger);
 
 app.use(express.static(path.join(__dirname, "client/build")));
-// app.use('/api/register',httpsRedirect(true));
-// app.use(`/api/register`, registerRouter);
+// app.use("/api/register", httpsRedirect(true));
+app.use(`/api/register`, registerRouter);
 
 app.get("*", (req, res, next) => {
   res.sendFile(path.join(__dirname, "/client/build/index.html"));

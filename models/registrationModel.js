@@ -1,41 +1,43 @@
-const mongoose = require('mongoose');
-const validator = require('validator');
+const mongoose = require("mongoose");
+const validator = require("validator");
 
 const registrationSchema = new mongoose.Schema({
-    name : {
-        type : String,
-        required : [true, 'user should have a name']
-    },
-    email : {
-        type : String,
-        required : [true, 'user should have an email'],
-        // unique : true,
-        lowercase : true,
-        validate : [validator.isEmail, 'Please provide a valid email']
-    },
-    phoneNumber : {
-        type : String,
-        required : [true]
-    },
-    emailVerified : {
-        type : Boolean,
-        default : false
-    },
-    workshop : {
-        type : String,
-        enum : ["Automobile", "Data Science", "Machine Learning", "Cyber Security"]
-    },
-    paymentId : {
-        type : String,
-        default : ""
-    },
-    college : {
-        type : String
-    },
-    branch : {
-        type : String
-    }
-})
+  name: {
+    type: String,
+    required: [true, "user should have a name"],
+  },
+  email: {
+    type: String,
+    required: [true, "user should have an email"],
+    // unique : true,
+    lowercase: true,
+    validate: [validator.isEmail, "Please provide a valid email"],
+  },
+  phoneNumber: {
+    type: String,
+    required: [true],
+  },
+  emailVerified: {
+    type: Boolean,
+    default: false,
+  },
+  workshop: {
+    type: String,
+  },
+  hasPaid: {
+    type: Boolean,
+    default: false,
+  },
+  college: {
+    type: String,
+  },
+  branch: {
+    type: String,
+  },
+  year: {
+    type: String,
+  },
+});
 
-const Registration = mongoose.model('Registration', registrationSchema);
+const Registration = mongoose.model("Registration", registrationSchema);
 module.exports = Registration;

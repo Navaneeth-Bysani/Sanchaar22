@@ -8,6 +8,7 @@ const config = require("./../utils/config");
 const catchAsync = require("./../utils/catchAsync");
 
 exports.initiateRegistration = catchAsync(async (req, res, next) => {
+  console.log("hello");
   const registration = {
     email: req.body.email,
     name: req.body.name,
@@ -15,6 +16,7 @@ exports.initiateRegistration = catchAsync(async (req, res, next) => {
     workshop: req.body.workshop,
     college: req.body.college,
     branch: req.body.branch,
+    year: req.body.year,
   };
 
   const existing = await Registration.findOne({
@@ -22,7 +24,7 @@ exports.initiateRegistration = catchAsync(async (req, res, next) => {
     phoneNumber: registration.phoneNumber,
     workshop: registration.workshop,
   });
-  if (existing && existing.paymentId !== null) {
+  if (existing && existing.hasPaid == true) {
     res.status(200).json({
       status: "Already paid",
       paid: true,
@@ -32,19 +34,19 @@ exports.initiateRegistration = catchAsync(async (req, res, next) => {
 
   const newRegistration = await Registration.create(registration);
   console.log(newRegistration);
-  if (newRegistration) {
-    const link = `https://sanchaar22.wissenaire.org/emailConfirm/${newRegistration._id}`;
+  // if (newRegistration) {
+  //   const link = `https://sanchaar22.wissenaire.org/emailConfirm/${newRegistration._id}`;
 
-    const text = `Hi ${newRegistration.name}! \n Please click on the link below to verify your email and complete the payment \n ${link}`;
+  //   const text = `Hi ${newRegistration.name}! \n Please click on the link below to verify your email and complete the payment \n ${link}`;
 
-    const options = {
-      email: newRegistration.email,
-      name: newRegistration.name,
-      text,
-      subject: "Email confirmation",
-    };
-    await email(options);
-  }
+  //   const options = {
+  //     email: newRegistration.email,
+  //     name: newRegistration.name,
+  //     text,
+  //     subject: "Email confirmation",
+  //   };
+  //   await email(options);
+  // }
 
   res.status(200).json({
     status: "success",

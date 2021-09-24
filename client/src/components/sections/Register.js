@@ -23,6 +23,7 @@ import axios from "axios";
 import Modal from "../elements/Modal";
 import AlertDialog from "../elements/MaterialModal";
 import validator from "validator";
+import { CircularProgress } from "@material-ui/core";
 import "./Register.css";
 
 // core components
@@ -93,6 +94,7 @@ function Register({ workshop, workshops, handleClose }) {
 
   const submitRegistration = () => {
     setIsLoading(true);
+
     // console.log(values);
     if (!validatePhoneNumber(values.phoneNumber)) {
       setShowError(true);
@@ -111,11 +113,13 @@ function Register({ workshop, workshops, handleClose }) {
         setIsLoading(false);
         if (response.data.paid === true) setRegistered(true);
         setShowConfirm(true);
+
         console.log(response);
       })
       .catch((err) => {
         setIsLoading(false);
         setShowError(true);
+
         console.log(err);
       });
   };
@@ -534,7 +538,7 @@ function Register({ workshop, workshops, handleClose }) {
                     </div>
                   </div>
                 </div>
-
+                {isLoading ? <div className="loader">Loading...</div> : null}
                 <div
                   className="testimonial-item-footer text-xs mt-32 mb-0 has-top-divider"
                   style={{
@@ -557,6 +561,10 @@ function Register({ workshop, workshops, handleClose }) {
                         !values.branch
                       }
                       onClick={submitRegistration}
+                      style={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                      }}
                     >
                       Register
                     </Button>

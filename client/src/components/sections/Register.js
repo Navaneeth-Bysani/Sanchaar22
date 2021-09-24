@@ -101,7 +101,7 @@ function Register({ workshop, workshops, handleClose }) {
     }
     axios
       .post(
-        "/api/register/initiateRegistration",
+        "https://witp-wiss.herokuapp.com/api/register/initiateRegistration",
         values
         // {
         //   withCredentials: true,

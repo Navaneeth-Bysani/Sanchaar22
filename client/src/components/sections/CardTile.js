@@ -53,7 +53,10 @@ const WorkshopCard = ({ workshop, handleOpen, className }) => {
           </div>
         </div>
 
-        <div className="testimonial-item-footer text-xs mt-32 mb-0 has-top-divider">
+        <div
+          className="testimonial-item-footer text-xs mt-32 mb-0 has-top-divider"
+          style={{ bottom: "10px" }}
+        >
           <span className="testimonial-item-link">
             <Button tag="a" color="dark" wideMobile onClick={handleOpen}>
               Register

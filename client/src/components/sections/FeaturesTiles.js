@@ -55,26 +55,26 @@ const workshops = [
     // gForm : "http://tinyurl.com/techvantoacademyworkshop"
   },
   {
-    name: "Embedded systems",
+    name: "Embedded systems with Robotics",
     content: "11th,Sept 2021",
     delay: "200",
     image: "embd.jpg",
     // gForm : "http://tinyurl.com/techvantoacademyworkshop"
   },
   {
-    name: "Cyber Security",
+    name: "Cyber Security and Ethical Hacking",
     content: "11th,Sept 2021",
     delay: "400",
     image: "cyber.jpg",
     // gForm : "http://tinyurl.com/techvantoacademyworkshop"
   },
-  {
-    name: "Ethical Hacking",
-    content: "11th,Sept 2021",
-    delay: "600",
-    image: "ethical.jpg",
-    // gForm : "http://tinyurl.com/techvantoacademyworkshop"
-  },
+  // {
+  //   name: "Ethical Hacking",
+  //   content: "11th,Sept 2021",
+  //   delay: "600",
+  //   image: "ethical.jpg",
+  //   // gForm : "http://tinyurl.com/techvantoacademyworkshop"
+  // },
 ];
 const propTypes = {
   ...SectionTilesProps.types,

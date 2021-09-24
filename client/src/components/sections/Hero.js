@@ -69,7 +69,9 @@ const Hero = ({
               className="mt-0 mb-16 reveal-from-bottom"
               data-reveal-delay="200"
             >
-              <span className="text-color-primary">Winter Traning Program</span>
+              <span className="text-color-primary">
+                Winter Internship Traning Program
+              </span>
             </h1>
           </div>
           <div

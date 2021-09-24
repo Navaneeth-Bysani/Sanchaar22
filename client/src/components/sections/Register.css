@@ -457,7 +457,7 @@ h6 {
 /* ==========================================================================
      #WRAPPER
      ========================================================================== */
-.wrapper {
+/* .wrapper {
   margin: 0 auto;
 }
 
@@ -471,7 +471,7 @@ h6 {
 
 .wrapper--w680 {
   max-width: 680px;
-}
+} */
 
 /* ==========================================================================
      #BUTTON
@@ -593,7 +593,7 @@ input {
 
 .input--style-4 {
   line-height: 40px;
-  background: #2e6c6c;
+  background: #1a3e7a;
   -webkit-box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
   -moz-box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
   box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
@@ -865,13 +865,13 @@ input {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  background: #175c5d;
+  background: #021636;
   background: url(https://images.unsplash.com/photo-1507208773393-40d9fc670acf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1268&q=80)
     no-repeat center;
 }
 
 .card-4 {
-  background: #175c5d;
+  background: #021636;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 0px;

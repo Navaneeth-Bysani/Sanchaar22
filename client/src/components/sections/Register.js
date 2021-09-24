@@ -93,7 +93,7 @@ function Register({ workshop, workshops, handleClose }) {
 
   const submitRegistration = () => {
     setIsLoading(true);
-    console.log(values);
+    // console.log(values);
     if (!validatePhoneNumber(values.phoneNumber)) {
       setShowError(true);
       setIsLoading(false);
@@ -101,7 +101,7 @@ function Register({ workshop, workshops, handleClose }) {
     }
     axios
       .post(
-        "https://wiss-sanchaar-2022.herokuapp.com/api/register/initiateRegistration",
+        "/api/register/initiateRegistration",
         values
         // {
         //   withCredentials: true,
@@ -111,12 +111,12 @@ function Register({ workshop, workshops, handleClose }) {
         setIsLoading(false);
         if (response.data.paid === true) setRegistered(true);
         setShowConfirm(true);
-        // console.log(response);
+        console.log(response);
       })
       .catch((err) => {
         setIsLoading(false);
         setShowError(true);
-        // console.log(err);
+        console.log(err);
       });
   };
   const handleChange = (event) => {
@@ -126,7 +126,15 @@ function Register({ workshop, workshops, handleClose }) {
     });
   };
 
+  const handleCloseModal = () => {
+    setShowConfirm(false);
+    setRegistered(false);
+    handleClose();
+  };
+
   const handleConfirm = () => {
+    window.location.href = "http://pages.razorpay.com/witp";
+
     setShowConfirm(false);
     setRegistered(false);
     handleClose();
@@ -138,7 +146,7 @@ function Register({ workshop, workshops, handleClose }) {
   };
 
   const alertDetails = [
-    "Registration has been successful. An email has been sent to you for further steps",
+    "Registration has been successful. Click on continue to pay for the program",
     "You have successfully completed the payment and are registered for the workshop. Please check your email for further updates",
   ];
   const successRegistration = (
@@ -561,7 +569,9 @@ function Register({ workshop, workshops, handleClose }) {
       </div>
       <AlertDialog
         show={showConfirm}
-        handleClose={handleConfirm}
+        handleClose={handleCloseModal}
+        confirm={true}
+        handleConfirm={handleConfirm}
         content={registered ? alertDetails[1] : alertDetails[0]}
       ></AlertDialog>
       <AlertDialog

@@ -74,6 +74,7 @@ const FeaturesSplit = ({
                   flexFlow: "row",
                   justifyContent: "center",
                   padding: "10px",
+                  borderRadius: "18px",
                 }}
               >
                 <Image
@@ -81,6 +82,7 @@ const FeaturesSplit = ({
                   alt="Features split 03"
                   width={520}
                   height={320}
+                  border={18}
                 />
               </div>
             </div>

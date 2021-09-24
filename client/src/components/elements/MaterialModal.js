@@ -6,7 +6,13 @@ import DialogContent from "@material-ui/core/DialogContent";
 import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
 
-export default function AlertDialog({ show, handleClose, content }) {
+export default function AlertDialog({
+  show,
+  handleClose,
+  content,
+  confirm,
+  handleConfirm,
+}) {
   return (
     <div>
       <Dialog
@@ -21,12 +27,23 @@ export default function AlertDialog({ show, handleClose, content }) {
           </DialogContentText>
         </DialogContent>
         <DialogActions>
+          {confirm ? (
+            <Button
+              tag="a"
+              color="light"
+              wideMobile
+              onClick={handleConfirm}
+              style={{ color: "green" }}
+            >
+              Continue
+            </Button>
+          ) : null}
           <Button
             tag="a"
             color="light"
             wideMobile
             onClick={handleClose}
-            style={{ color: "green" }}
+            style={{ color: "red" }}
           >
             Close
           </Button>

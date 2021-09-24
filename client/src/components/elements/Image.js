@@ -1,79 +1,71 @@
-import React, { useState, useRef, useEffect } from 'react';
-import PropTypes from 'prop-types';
+import React, { useState, useRef, useEffect } from "react";
+import PropTypes from "prop-types";
+import classNames from "classnames";
 
 const propTypes = {
-  src: PropTypes.oneOfType([
-    PropTypes.object,
-    PropTypes.string
-  ]).isRequired,
+  src: PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired,
   width: PropTypes.number,
   height: PropTypes.number,
-  alt: PropTypes.string
-}
+  alt: PropTypes.string,
+};
 
 const defaultProps = {
   src: undefined,
   width: undefined,
   height: undefined,
-  alt: undefined
-}
+  alt: undefined,
+};
 
-const Image = ({
-  className,
-  src,
-  width,
-  height,
-  alt,
-  ...props
-}) => {
-
+const Image = ({ className, src, width, height, alt, border, ...props }) => {
   const [loaded, setLoaded] = useState(false);
 
+  const outerClasses = classNames(border && "has-border", className);
   const image = useRef(null);
 
   useEffect(() => {
     handlePlaceholder(image.current);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  
+
   const placeholderSrc = (w, h) => {
     return `data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}"%3E%3C/svg%3E`;
-  }
+  };
 
   const handlePlaceholder = (img) => {
-    const placeholder = document.createElement('img');
+    const placeholder = document.createElement("img");
     if (!loaded) {
-      img.style.display = 'none';
+      img.style.display = "none";
       img.before(placeholder);
       placeholder.src = placeholderSrc(
-        img.getAttribute('width') || 0,
-        img.getAttribute('height') || 0
+        img.getAttribute("width") || 0,
+        img.getAttribute("height") || 0
       );
-      placeholder.width = img.getAttribute('width');
-      placeholder.height = img.getAttribute('height');
-      placeholder.style.opacity = '0';
+      placeholder.width = img.getAttribute("width");
+      placeholder.height = img.getAttribute("height");
+      placeholder.style.opacity = "0";
       img.className && placeholder.classList.add(img.className);
       placeholder.remove();
-      img.style.display = '';      
+      img.style.display = "";
     }
-  }
+  };
 
   function onLoad() {
     setLoaded(true);
-  }  
+  }
 
   return (
     <img
       {...props}
       ref={image}
-      className={className}
+      className={outerClasses}
       src={src}
       width={width}
       height={height}
       alt={alt}
-      onLoad={onLoad} />
+      onLoad={onLoad}
+    />
   );
-}
+};
 
 Image.propTypes = propTypes;
 Image.defaultProps = defaultProps;

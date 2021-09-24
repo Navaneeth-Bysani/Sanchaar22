@@ -50,6 +50,32 @@
     }
   }
 }
+.modal::-webkit-scrollbar {
+  width: 5px;
+}
+.modal::-webkit-scrollbar-track {
+  border: 1px solid #000;
+  padding: 2px 0;
+  background-color: #404040;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 
 .modal-inner {
   max-height: calc(100vh - #{$modal--outer-padding-v__mobile} * 2);
@@ -65,7 +91,7 @@
 }
 
 .modal-content {
-  padding: $modal--inner-padding-v__mobile $modal--inner-padding-h__mobile;
+  padding: 0;
 }
 
 .modal-close {
@@ -119,10 +145,10 @@
   }
 
   .modal-content {
-    padding-top: $modal--inner-padding-v__desktop;
-    padding-bottom: $modal--inner-padding-v__desktop;
-    padding-left: $modal--inner-padding-h__desktop;
-    padding-right: $modal--inner-padding-h__desktop;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 

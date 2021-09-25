@@ -94,9 +94,9 @@ const FeaturesSplit = ({
                 data-reveal-container=".split-item"
               >
                 <Image
-                  src={require("./../../assets/images/features-split-image-03.png")}
+                  src={require("./../../assets/images/iitbbs.jpg")}
                   alt="Features split 03"
-                  width={528}
+                  width={428}
                   height={396}
                 />
               </div>

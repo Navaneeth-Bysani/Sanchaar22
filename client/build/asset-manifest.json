@@ -1,25 +1,26 @@
 {
   "files": {
     "main.css": "/static/css/main.df85bebc.chunk.css",
-    "main.js": "/static/js/main.5a89c9d2.chunk.js",
-    "main.js.map": "/static/js/main.5a89c9d2.chunk.js.map",
+    "main.js": "/static/js/main.3786eb25.chunk.js",
+    "main.js.map": "/static/js/main.3786eb25.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.1e1db0f9.js",
     "runtime-main.js.map": "/static/js/runtime-main.1e1db0f9.js.map",
-    "static/js/2.5b3b8864.chunk.js": "/static/js/2.5b3b8864.chunk.js",
-    "static/js/2.5b3b8864.chunk.js.map": "/static/js/2.5b3b8864.chunk.js.map",
+    "static/js/2.f56a81bc.chunk.js": "/static/js/2.f56a81bc.chunk.js",
+    "static/js/2.f56a81bc.chunk.js.map": "/static/js/2.f56a81bc.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.de5dead529265d40c230441cdaaf0019.js": "/precache-manifest.de5dead529265d40c230441cdaaf0019.js",
+    "precache-manifest.97c37a7da0ebd56c4ad317f4920e5b58.js": "/precache-manifest.97c37a7da0ebd56c4ad317f4920e5b58.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.df85bebc.chunk.css.map": "/static/css/main.df85bebc.chunk.css.map",
-    "static/js/2.5b3b8864.chunk.js.LICENSE.txt": "/static/js/2.5b3b8864.chunk.js.LICENSE.txt",
+    "static/js/2.f56a81bc.chunk.js.LICENSE.txt": "/static/js/2.f56a81bc.chunk.js.LICENSE.txt",
     "static/media/Automobile.jpg": "/static/media/Automobile.78f3b759.jpg",
+    "static/media/Brand.jpg": "/static/media/Brand.3ba22817.jpg",
     "static/media/Brand.png": "/static/media/Brand.80c661ce.png",
-    "static/media/Edu-Vitae.png": "/static/media/Edu-Vitae.547910c1.png",
+    "static/media/Edu-Vitae.png": "/static/media/Edu-Vitae.b83c3827.png",
     "static/media/Edu-Vitae1.jpg": "/static/media/Edu-Vitae1.88a3cd59.jpg",
     "static/media/ML.jpeg": "/static/media/ML.99aaa6bb.jpeg",
     "static/media/Screenshot (149).png": "/static/media/Screenshot (149).af1cedeb.png",
     "static/media/cer.jpeg": "/static/media/cer.bd830c88.jpeg",
-    "static/media/certificate.jpeg": "/static/media/certificate.bd830c88.jpeg",
+    "static/media/certificate.jpeg": "/static/media/certificate.c2dc57aa.jpeg",
     "static/media/style.scss": "/static/media/illustration-section-02.63d0555d.svg",
     "static/media/cyber.jpg": "/static/media/cyber.df00373a.jpg",
     "static/media/embd.jpg": "/static/media/embd.b073b561.jpg",
@@ -35,6 +36,7 @@
     "static/media/features-split-image-02.png": "/static/media/features-split-image-02.3c569239.png",
     "static/media/features-split-image-03.png": "/static/media/features-split-image-03.87e4d053.png",
     "static/media/hyper.jpg": "/static/media/hyper.aeedd60c.jpg",
+    "static/media/iitbbs.jpg": "/static/media/iitbbs.3157f6ea.jpg",
     "static/media/java.png": "/static/media/java.198edc47.png",
     "static/media/java.webp": "/static/media/java.1fc0d3cb.webp",
     "static/media/logo.svg": "/static/media/logo.2810a88b.svg",
@@ -51,8 +53,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.1e1db0f9.js",
-    "static/js/2.5b3b8864.chunk.js",
+    "static/js/2.f56a81bc.chunk.js",
     "static/css/main.df85bebc.chunk.css",
-    "static/js/main.5a89c9d2.chunk.js"
+    "static/js/main.3786eb25.chunk.js"
   ]
 }

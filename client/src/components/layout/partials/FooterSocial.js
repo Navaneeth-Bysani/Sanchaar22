@@ -51,7 +51,7 @@ const FooterSocial = ({ className, ...props }) => {
           </a>
         </li>
         <li>
-          <a href="https://twitter.com/wissenaire21?lang=en">
+          <a href="https://www.linkedin.com/company/wissenaire-iit-bhubaneswar/">
             <svg
               width="26"
               height="26"

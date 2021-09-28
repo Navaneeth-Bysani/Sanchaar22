@@ -70,7 +70,7 @@ const Hero = ({
               data-reveal-delay="200"
             >
               <span className="text-color-primary">
-                Winter Internship Traning Program
+                Winter Internship & Traning Program
               </span>
             </h1>
           </div>
@@ -83,18 +83,19 @@ const Hero = ({
             <a href="https://wissenaire.org/" target="_blank">
               <Image
                 // className="has-shadow"
-                src={require("./../../assets/images/wissLogo.png")}
+                src={require("./../../assets/images/w.png")}
                 alt="Hero"
                 width={348}
-                height={252}
+                height={232}
               />
             </a>
             <h3
               style={{
                 fontSize: "15px",
                 margin: "0px",
-                fontWeight: "lighter",
+                fontWeight: "400",
                 fontStyle: "italic",
+                marginTop: "5px",
               }}
             >
               {" "}
@@ -102,7 +103,7 @@ const Hero = ({
             </h3>
             <Image
               // className="has-shadow"
-              src={require("./../../assets/images/Edu-Vitae.png")}
+              src={require("./../../assets/images/ed.png")}
               // src={require("./../../assets/images/techVantoLogo.jpeg")}
               alt="Hero"
               width={348}

@@ -12,50 +12,36 @@ import { set } from "react-ga";
 
 const workshops = [
   {
-    name: "Python",
+    name: "Machine Learning with Python",
     content: "11th,Sept 2021",
     delay: "200",
-    image: "python.png",
-    // gForm : ""
-  },
-  {
-    name: "Java",
-    content: "11th,Sept 2021",
-    delay: "400",
-    image: "java.png",
-    // gForm : "http://tinyurl.com/techvantoacademyworkshop"
-  },
-  {
-    name: "Machine Learning",
-    content: "11th,Sept 2021",
-    delay: "600",
     image: "ML.jpg",
     // gForm : ""
   },
   {
-    name: "Full Stack Development",
+    name: "Full Stack Web Development",
     content: "11th,Sept 2021",
-    delay: "200",
+    delay: "400",
     image: "web.jpg",
     // gForm : ""
   },
   {
-    name: "Android Development",
+    name: "Product UI/UX design",
     content: "11th,Sept 2021",
-    delay: "400",
-    image: "android.png",
+    delay: "600",
+    image: "ui.jpg",
     // gForm : "http://tinyurl.com/techvantoacademyworkshop"
   },
 
+  // {
+  //   name: "Automobile",
+  //   content: "11th,Sept 2021",
+  //   delay: "600",
+  //   image: "Automobile.jpg",
+  //   // gForm : "http://tinyurl.com/techvantoacademyworkshop"
+  // },
   {
-    name: "Automobile",
-    content: "11th,Sept 2021",
-    delay: "600",
-    image: "Automobile.jpg",
-    // gForm : "http://tinyurl.com/techvantoacademyworkshop"
-  },
-  {
-    name: "Embedded systems with Robotics",
+    name: "Embedded Systems with Robotics & IoT",
     content: "11th,Sept 2021",
     delay: "200",
     image: "embd.jpg",
@@ -66,6 +52,20 @@ const workshops = [
     content: "11th,Sept 2021",
     delay: "400",
     image: "cyber.jpg",
+    // gForm : "http://tinyurl.com/techvantoacademyworkshop"
+  },
+  {
+    name: "Mechatronics with Advanced Study",
+    content: "11th,Sept 2021",
+    delay: "600",
+    image: "mechatronics.jpg",
+    // gForm : ""
+  },
+  {
+    name: "CPM (Construction Project Management)",
+    content: "11th,Sept 2021",
+    delay: "200",
+    image: "cpm.jpg",
     // gForm : "http://tinyurl.com/techvantoacademyworkshop"
   },
   // {

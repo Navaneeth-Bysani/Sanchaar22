@@ -48,14 +48,14 @@ const WorkshopCard = ({ workshop, handleOpen, className }) => {
             </p>
             <p style={{ display: "flex", color: "#6987AB", fontSize: "16px" }}>
               <FaPhoneAlt style={{ marginLeft: "10px", marginRight: "10px" }} />{" "}
-              998283839
+              8317652305
             </p>
           </div>
         </div>
 
         <div
           className="testimonial-item-footer text-xs mt-32 mb-0 has-top-divider"
-          style={{ bottom: "10px" }}
+          // style={{ bottom: "10px" }}
         >
           <span className="testimonial-item-link">
             <Button tag="a" color="dark" wideMobile onClick={handleOpen}>

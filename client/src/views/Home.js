@@ -25,13 +25,13 @@ const Home = () => {
         className="illustration-section-02"
         id="#aboutUs"
       />
-      <Faculty
+      {/* <Faculty
         invertMobile
         topDivider
         imageFill
         className="illustration-section-02"
         id="#faculty"
-      />
+      /> */}
       <Certificate
         invertMobile
         topDivider

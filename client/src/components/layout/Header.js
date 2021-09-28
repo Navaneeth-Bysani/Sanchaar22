@@ -131,7 +131,7 @@ const Header = ({
                         smooth={true}
                         onClick={closeMenu}
                       >
-                        Programs
+                        Training Programs
                       </Link>
                     </li>
                     <li>
@@ -144,16 +144,7 @@ const Header = ({
                         About us
                       </Link>
                     </li>
-                    <li>
-                      <Link
-                        to="#faculty"
-                        spy={true}
-                        smooth={true}
-                        onClick={closeMenu}
-                      >
-                        Faculty
-                      </Link>
-                    </li>
+
                     <li>
                       <Link
                         to="#certificate"

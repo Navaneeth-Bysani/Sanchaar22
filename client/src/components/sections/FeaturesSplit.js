@@ -76,7 +76,7 @@ const FeaturesSplit = ({
                   className="mt-0 mb-12"
                   style={{ color: "#85beff", fontSize: "30px" }}
                 >
-                  Why should you take this course
+                  Program Highlights
                 </h3>
 
                 <div>
@@ -89,7 +89,7 @@ const FeaturesSplit = ({
                         Technical Workshops
                       </span>{" "} */}
                       {/* <br></br> */}
-                      Live Online Training
+                      Live Interactive Online Training
                     </li>
                     <li>
                       {/* <span

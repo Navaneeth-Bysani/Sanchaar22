@@ -56,12 +56,14 @@ const FeaturesSplit = ({
     <section
       {...props}
       className={outerClasses}
-      style={{ backgroundColor: "#272a2e" }}
+      style={{ backgroundColor: "#d1d1d1" }}
     >
       <div className="container">
         <div className={innerClasses}>
           <div className=" center-content reveal-from-bottom">
-            <h1 style={{ fontSize: "30px", marginTop: "0px" }}>
+            <h1
+              style={{ fontSize: "30px", marginTop: "0px", color: "#054599" }}
+            >
               Certificate Awarded
             </h1>
           </div>
@@ -76,9 +78,10 @@ const FeaturesSplit = ({
                   padding: "10px",
                   borderRadius: "18px",
                 }}
+                duration="400"
               >
                 <Image
-                  src={require("./../../assets/images/certificate.jpeg")}
+                  src={require("./../../assets/images/cert.jpg")}
                   alt="Features split 03"
                   width={520}
                   height={320}

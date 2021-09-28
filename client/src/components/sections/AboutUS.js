@@ -96,8 +96,8 @@ const FeaturesSplit = ({
                 <Image
                   src={require("./../../assets/images/iitbbs.jpg")}
                   alt="Features split 03"
-                  width={428}
-                  height={396}
+                  width={328}
+                  height={296}
                 />
               </div>
             </div>

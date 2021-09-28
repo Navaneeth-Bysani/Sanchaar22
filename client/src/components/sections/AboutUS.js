@@ -65,7 +65,7 @@ const FeaturesSplit = ({
           <div className={splitClasses}>
             <div className="split-item">
               <div
-                className="split-item-content center-content-mobile reveal-from-right"
+                className="split-item-content center-content-mobile reveal-from-left"
                 data-reveal-container=".split-item"
                 style={{ top: "10px" }}
               >
@@ -88,13 +88,14 @@ const FeaturesSplit = ({
               </div>
               <div
                 className={classNames(
-                  "split-item-image center-content-mobile reveal-from-bottom",
+                  "split-item-image center-content-mobile reveal-from-right",
                   imageFill && "split-item-image-fill"
                 )}
                 data-reveal-container=".split-item"
+                duration="400"
               >
                 <Image
-                  src={require("./../../assets/images/iitbbs.jpg")}
+                  src={require("./../../assets/images/iitbhub.jpg")}
                   alt="Features split 03"
                   width={328}
                   height={296}

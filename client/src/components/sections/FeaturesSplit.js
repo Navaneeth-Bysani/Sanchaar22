@@ -132,10 +132,11 @@ const FeaturesSplit = ({
               </div>
               <div
                 className={classNames(
-                  "split-item-image center-content-mobile reveal-from-bottom",
+                  "split-item-image center-content-mobile reveal-from-right",
                   imageFill && "split-item-image-fill"
                 )}
                 data-reveal-container=".split-item"
+                duration="400"
               >
                 <Image
                   src={require("./../../assets/images/Brand.jpg")}

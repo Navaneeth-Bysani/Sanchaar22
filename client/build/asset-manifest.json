@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.4e3012d5.chunk.css",
-    "main.js": "/static/js/main.224d90d3.chunk.js",
-    "main.js.map": "/static/js/main.224d90d3.chunk.js.map",
+    "main.js": "/static/js/main.f263eaf8.chunk.js",
+    "main.js.map": "/static/js/main.f263eaf8.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.1e1db0f9.js",
     "runtime-main.js.map": "/static/js/runtime-main.1e1db0f9.js.map",
-    "static/js/2.46fa4be8.chunk.js": "/static/js/2.46fa4be8.chunk.js",
-    "static/js/2.46fa4be8.chunk.js.map": "/static/js/2.46fa4be8.chunk.js.map",
+    "static/js/2.1bca79d7.chunk.js": "/static/js/2.1bca79d7.chunk.js",
+    "static/js/2.1bca79d7.chunk.js.map": "/static/js/2.1bca79d7.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.aeec48f6e4b7d95b6c75fe4f02d73569.js": "/precache-manifest.aeec48f6e4b7d95b6c75fe4f02d73569.js",
+    "precache-manifest.3b18192e1bb2c25eadb062740115195b.js": "/precache-manifest.3b18192e1bb2c25eadb062740115195b.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.4e3012d5.chunk.css.map": "/static/css/main.4e3012d5.chunk.css.map",
-    "static/js/2.46fa4be8.chunk.js.LICENSE.txt": "/static/js/2.46fa4be8.chunk.js.LICENSE.txt",
+    "static/js/2.1bca79d7.chunk.js.LICENSE.txt": "/static/js/2.1bca79d7.chunk.js.LICENSE.txt",
     "static/media/Automobile.jpg": "/static/media/Automobile.78f3b759.jpg",
     "static/media/Brand.jpg": "/static/media/Brand.3ba22817.jpg",
     "static/media/Brand.png": "/static/media/Brand.80c661ce.png",
@@ -43,6 +43,7 @@
     "static/media/iit.png": "/static/media/iit.51b39baf.png",
     "static/media/iitbbs.jpg": "/static/media/iitbbs.624d50be.jpg",
     "static/media/iitbbsl.webp": "/static/media/iitbbsl.89a64173.webp",
+    "static/media/iitbhub.jpg": "/static/media/iitbhub.5050c6e6.jpg",
     "static/media/java.png": "/static/media/java.198edc47.png",
     "static/media/java.webp": "/static/media/java.1fc0d3cb.webp",
     "static/media/logo.svg": "/static/media/logo.2810a88b.svg",
@@ -63,8 +64,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.1e1db0f9.js",
-    "static/js/2.46fa4be8.chunk.js",
+    "static/js/2.1bca79d7.chunk.js",
     "static/css/main.4e3012d5.chunk.css",
-    "static/js/main.224d90d3.chunk.js"
+    "static/js/main.f263eaf8.chunk.js"
   ]
 }

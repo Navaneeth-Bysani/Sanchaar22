@@ -70,7 +70,6 @@ const Hero = ({
             <h1
               className="mt-0 mb-16 reveal-from-bottom"
               data-reveal-delay="200"
-              style={{ color: "red" }}
             >
               <span className="text-color-primary">
                 Winter Internship & Traning Program

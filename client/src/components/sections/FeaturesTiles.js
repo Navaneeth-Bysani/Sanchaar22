@@ -26,7 +26,7 @@ const workshops = [
     // gForm : ""
   },
   {
-    name: "Product UI/UX design",
+    name: "Product & UI/UX design",
     content: "11th,Sept 2021",
     delay: "600",
     image: "ui.jpg",
@@ -139,7 +139,11 @@ const FeaturesTiles = ({
   );
 
   return (
-    <section {...props} className={outerClasses}>
+    <section
+      {...props}
+      className={outerClasses}
+      style={{ backgroundColor: "#030d14" }}
+    >
       <div className="container">
         <div className={innerClasses}>
           <SectionHeader data={sectionHeader} className="center-content" />

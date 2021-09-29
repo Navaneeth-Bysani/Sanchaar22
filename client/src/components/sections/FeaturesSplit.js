@@ -61,7 +61,7 @@ const FeaturesSplit = ({
     <section
       {...props}
       className={outerClasses}
-      style={{ backgroundColor: "#272a2e" }}
+      style={{ backgroundColor: "#0c293b" }}
     >
       <div className="container">
         <div className={innerClasses}>
@@ -81,16 +81,7 @@ const FeaturesSplit = ({
 
                 <div>
                   <ul style={{ fontSize: "18px" }}>
-                    <li>
-                      {/* <span
-                        className="text-xxs text-color-primary"
-                        style={{ fontSize: "18px", fontWeight: "bold" }}
-                      >
-                        Technical Workshops
-                      </span>{" "} */}
-                      {/* <br></br> */}
-                      Live Interactive Online Training
-                    </li>
+                    <li>Live Interactive Online Training</li>
                     <li>
                       {/* <span
                         className="text-xxs text-color-primary"

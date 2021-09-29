@@ -17,24 +17,22 @@ const Home = () => {
       <Hero />
       {/* <Heros /> */}
       <FeaturesSplit id="#edu-vitae" />
-      <FeaturesTiles topDivider id="#programs" />
+      <FeaturesTiles id="#programs" />
       <AboutUs
         invertMobile
-        topDivider
         imageFill
         className="illustration-section-02"
         id="#aboutUs"
       />
       {/* <Faculty
         invertMobile
-        topDivider
+        
         imageFill
         className="illustration-section-02"
         id="#faculty"
       /> */}
       <Certificate
         invertMobile
-        topDivider
         imageFill
         className="illustration-section-02"
         id="#certificate"

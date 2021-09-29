@@ -2,7 +2,7 @@ import React from "react";
 import Image from "../elements/Image";
 import classNames from "classnames";
 import Button from "../elements/Button";
-import { CgCalendarDates } from "react-icons/cg";
+import { BiCalendar } from "react-icons/bi";
 import { FaPhoneAlt } from "react-icons/fa";
 
 const WorkshopCard = ({ workshop, handleOpen, className }) => {
@@ -28,7 +28,7 @@ const WorkshopCard = ({ workshop, handleOpen, className }) => {
         </div>
         <div
           className="features-tiles-item-content"
-          style={{ postion: "relative", marginLeft: "10px", marginTop: "10px" }}
+          style={{ postion: "relative", margin: "10px", marginBottom: "2px" }}
         >
           <h4 className="mt-0 mb-8" style={{ fontSize: "22px" }}>
             {workshop.name}
@@ -37,19 +37,41 @@ const WorkshopCard = ({ workshop, handleOpen, className }) => {
             style={{
               display: "flex",
               justifyContent: "space-between",
-              margin: "10px",
+              margin: "10px 5px",
             }}
           >
-            <p style={{ display: "flex", color: "#6987AB", fontSize: "16px" }}>
-              <CgCalendarDates
-                style={{ marginLeft: "10px", marginRight: "10px" }}
-              />{" "}
-              {workshop.content}
-            </p>
-            <p style={{ display: "flex", color: "#6987AB", fontSize: "16px" }}>
-              <FaPhoneAlt style={{ marginLeft: "10px", marginRight: "10px" }} />{" "}
-              8317652305
-            </p>
+            <div style={{ display: "flex", flexFlow: "column" }}>
+              <p
+                style={{
+                  display: "flex",
+                  color: "#6185b0",
+                  fontSize: "14px",
+                  marginBottom: "0px",
+                }}
+              >
+                <BiCalendar style={{ marginLeft: "5px", marginRight: "5px" }} />{" "}
+                Batch 1 : December,2021
+              </p>
+              <p
+                style={{
+                  display: "flex",
+                  color: "#6185b0",
+                  fontSize: "14px",
+                  marginBottom: "0px",
+                }}
+              >
+                <BiCalendar style={{ marginLeft: "5px", marginRight: "5px" }} />{" "}
+                Batch 2 : January,2022
+              </p>
+            </div>
+            <div>
+              <p
+                style={{ display: "flex", color: "#6185b0", fontSize: "14px" }}
+              >
+                <FaPhoneAlt style={{ marginLeft: "5px", marginRight: "5px" }} />{" "}
+                8317652305
+              </p>
+            </div>
           </div>
         </div>
 

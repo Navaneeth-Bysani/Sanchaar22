@@ -57,7 +57,7 @@ const FeaturesSplit = ({
     <section
       {...props}
       className={outerClasses}
-      style={{ backgroundColor: "#272a2e" }}
+      style={{ backgroundColor: "#0c293b" }}
     >
       <div className="container">
         <div className={innerClasses}>

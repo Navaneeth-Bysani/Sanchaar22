@@ -5,7 +5,7 @@ import ButtonGroup from "../elements/ButtonGroup";
 import Button from "../elements/Button";
 import Image from "../elements/Image";
 import Modal from "../elements/Modal";
-import trainingImage from "./../../assets/images/training.jpg";
+import trainingImage from "./../../assets/images/trainingImage.jpg";
 
 const propTypes = {
   ...SectionProps.types,
@@ -58,9 +58,11 @@ const Hero = ({
     <section
       {...props}
       className={outerClasses}
-      // style={{
-      //   backgroundImage: `url(${trainingImage})`,
-      // }}
+      style={{
+        backgroundImage: `url(${trainingImage})`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "100% 100%",
+      }}
     >
       <div className="container-sm">
         <div className={innerClasses}>
@@ -68,6 +70,7 @@ const Hero = ({
             <h1
               className="mt-0 mb-16 reveal-from-bottom"
               data-reveal-delay="200"
+              style={{ color: "red" }}
             >
               <span className="text-color-primary">
                 Winter Internship & Traning Program
@@ -85,7 +88,7 @@ const Hero = ({
                 // className="has-shadow"
                 src={require("./../../assets/images/w.png")}
                 alt="Hero"
-                width={348}
+                width={368}
                 height={232}
               />
             </a>
@@ -106,7 +109,7 @@ const Hero = ({
               src={require("./../../assets/images/ed.png")}
               // src={require("./../../assets/images/techVantoLogo.jpeg")}
               alt="Hero"
-              width={348}
+              width={368}
               height={252}
             />
             {/* </a> */}

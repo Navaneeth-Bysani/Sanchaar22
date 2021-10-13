@@ -157,6 +157,12 @@ const FeaturesTiles = ({
                 />
               );
             })}
+            <div>
+              <h5>
+                Total fee INR 2999/- Pay in installments| Book your seat now
+                with just @ Rs. 499/- only.
+              </h5>
+            </div>
             <Modal handleClose={handleClose} show={show}>
               <Register
                 workshop={workshopSelected}

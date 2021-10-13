@@ -64,12 +64,28 @@ const WorkshopCard = ({ workshop, handleOpen, className }) => {
                 Batch 2 : January,2022
               </p>
             </div>
-            <div>
+            <div style={{ display: "flex", flexFlow: "column" }}>
               <p
-                style={{ display: "flex", color: "#6185b0", fontSize: "14px" }}
+                style={{
+                  display: "flex",
+                  color: "#6185b0",
+                  fontSize: "14px",
+                  marginBottom: "0px",
+                }}
               >
                 <FaPhoneAlt style={{ marginLeft: "5px", marginRight: "5px" }} />{" "}
                 8317652305
+              </p>
+              <p
+                style={{
+                  display: "flex",
+                  color: "#6185b0",
+                  fontSize: "14px",
+                  marginBottom: "0px",
+                }}
+              >
+                <FaPhoneAlt style={{ marginLeft: "5px", marginRight: "5px" }} />{" "}
+                8168123648
               </p>
             </div>
           </div>

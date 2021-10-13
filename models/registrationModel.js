@@ -37,6 +37,10 @@ const registrationSchema = new mongoose.Schema({
   year: {
     type: String,
   },
+  createdAt: {
+    type: String,
+    default: new Date(Date.now()).toLocaleString(),
+  },
 });
 
 const Registration = mongoose.model("Registration", registrationSchema);

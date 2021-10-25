@@ -60,7 +60,7 @@ const FeaturesSplit = ({
     >
       <div className="container">
         <div className={innerClasses}>
-          <div className=" center-content reveal-from-bottom">
+          <div className=" center-content reveal-from-top">
             <h1
               style={{ fontSize: "30px", marginTop: "0px", color: "#054599" }}
             >
@@ -81,7 +81,7 @@ const FeaturesSplit = ({
                 duration="400"
               >
                 <Image
-                  src={require("./../../assets/images/cert.jpg")}
+                  src={require("./../../assets/images/certificate1.jpeg")}
                   alt="Features split 03"
                   width={520}
                   height={320}

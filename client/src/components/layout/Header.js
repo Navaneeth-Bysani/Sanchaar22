@@ -168,30 +168,19 @@ const Header = ({
                           Certificate
                         </Link>
                       </li>
-                    </ul>
-                    {/* {!hideSignin && (
-                    <ul className="list-reset header-nav-right">
                       <li>
-                        <Link
-                          to="#0"
-                          className="button button-primary button-wide-mobile button-sm"
-                          onClick={closeMenu}
-                        >
-                          Sign up
-                        </Link>
+                        <span className="testimonial-item-link">
+                          <Button
+                            tag="a"
+                            color="dark"
+                            wideMobile
+                            onClick={handleOpen}
+                          >
+                            Register
+                          </Button>
+                        </span>
                       </li>
                     </ul>
-                  )} */}
-                    <span className="testimonial-item-link">
-                      <Button
-                        tag="a"
-                        color="dark"
-                        wideMobile
-                        onClick={handleOpen}
-                      >
-                        Register
-                      </Button>
-                    </span>
                   </div>
                 </nav>
               </>

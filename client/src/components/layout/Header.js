@@ -4,6 +4,9 @@ import classNames from "classnames";
 // import { Link } from "react-router-dom";
 import { Link } from "react-scroll";
 import Logo from "./partials/Logo";
+import Button from "../elements/Button";
+import Modal from "../elements/Modal";
+import Register from "./../sections/Register";
 
 const propTypes = {
   navPosition: PropTypes.string,
@@ -78,85 +81,95 @@ const Header = ({
     bottomOuterDivider && "has-bottom-divider",
     className
   );
+  const [show, setShow] = useState(false);
+  const handleClose = () => {
+    setShow(false);
+  };
+
+  const handleOpen = (workshop) => {
+    setShow(true);
+    // window.location.href = workshop.gForm;
+  };
 
   return (
-    <header {...props} className={classes}>
-      <div className="container">
-        <div
-          className={classNames(
-            "site-header-inner",
-            bottomDivider && "has-bottom-divider"
-          )}
-        >
-          <Logo />
-          {!hideNav && (
-            <>
-              <button
-                ref={hamburger}
-                className="header-nav-toggle"
-                onClick={isActive ? closeMenu : openMenu}
-              >
-                <span className="screen-reader">Menu</span>
-                <span className="hamburger">
-                  <span className="hamburger-inner"></span>
-                </span>
-              </button>
-              <nav
-                ref={nav}
-                className={classNames("header-nav", isActive && "is-active")}
-              >
-                <div className="header-nav-inner">
-                  <ul
-                    className={classNames(
-                      "list-reset text-xs",
-                      navPosition && `header-nav-${navPosition}`
-                    )}
-                    style={{ cursor: "pointer" }}
-                  >
-                    <li>
-                      <Link
-                        activeClass="active"
-                        to="#edu-vitae"
-                        spy={true}
-                        smooth={true}
-                        onClick={closeMenu}
-                      >
-                        Edu-Vitae
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to="#programs"
-                        spy={true}
-                        smooth={true}
-                        onClick={closeMenu}
-                      >
-                        Training Programs
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to="#aboutUs"
-                        spy={true}
-                        smooth={true}
-                        onClick={closeMenu}
-                      >
-                        About us
-                      </Link>
-                    </li>
+    <>
+      <header {...props} className={classes}>
+        <div className="container">
+          <div
+            className={classNames(
+              "site-header-inner",
+              bottomDivider && "has-bottom-divider"
+            )}
+          >
+            <Logo />
+            {!hideNav && (
+              <>
+                <button
+                  ref={hamburger}
+                  className="header-nav-toggle"
+                  onClick={isActive ? closeMenu : openMenu}
+                >
+                  <span className="screen-reader">Menu</span>
+                  <span className="hamburger">
+                    <span className="hamburger-inner"></span>
+                  </span>
+                </button>
+                <nav
+                  ref={nav}
+                  className={classNames("header-nav", isActive && "is-active")}
+                >
+                  <div className="header-nav-inner">
+                    <ul
+                      className={classNames(
+                        "list-reset text-xs",
+                        navPosition && `header-nav-${navPosition}`
+                      )}
+                      style={{ cursor: "pointer" }}
+                    >
+                      <li>
+                        <Link
+                          activeClass="active"
+                          to="#edu-vitae"
+                          spy={true}
+                          smooth={true}
+                          onClick={closeMenu}
+                        >
+                          Edu-Vitae
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          to="#programs"
+                          spy={true}
+                          smooth={true}
+                          onClick={closeMenu}
+                        >
+                          Training Programs
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          to="#aboutUs"
+                          spy={true}
+                          smooth={true}
+                          onClick={closeMenu}
+                        >
+                          About us
+                        </Link>
+                      </li>
 
-                    <li>
-                      <Link
-                        to="#certificate"
-                        spy={true}
-                        smooth={true}
-                        onClick={closeMenu}
-                      >
-                        Certificate
-                      </Link>
-                    </li>
-                  </ul>
-                  {/* {!hideSignin && (
+                      <li>
+                        <Link
+                          to="#certificate"
+                          spy={true}
+                          smooth={true}
+                          onClick={closeMenu}
+                        >
+                          Certificate
+                        </Link>
+                      </li>
+                    </ul>
+                    {/* {!hideSignin && (
                     <ul className="list-reset header-nav-right">
                       <li>
                         <Link
@@ -169,13 +182,27 @@ const Header = ({
                       </li>
                     </ul>
                   )} */}
-                </div>
-              </nav>
-            </>
-          )}
+                    <span className="testimonial-item-link">
+                      <Button
+                        tag="a"
+                        color="dark"
+                        wideMobile
+                        onClick={handleOpen}
+                      >
+                        Register
+                      </Button>
+                    </span>
+                  </div>
+                </nav>
+              </>
+            )}
+          </div>
         </div>
-      </div>
-    </header>
+      </header>
+      <Modal handleClose={handleClose} show={show}>
+        <Register handleClose={handleClose} />
+      </Modal>
+    </>
   );
 };
 

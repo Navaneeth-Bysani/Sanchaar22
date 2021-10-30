@@ -23,7 +23,12 @@ import axios from "axios";
 import Modal from "../elements/Modal";
 import AlertDialog from "../elements/MaterialModal";
 import validator from "validator";
-import { CircularProgress } from "@material-ui/core";
+import {
+  CircularProgress,
+  Select,
+  InputLabel,
+  MenuItem,
+} from "@material-ui/core";
 import "./Register.css";
 
 // core components
@@ -66,7 +71,141 @@ const BootstrapInput = withStyles((theme) => ({
   },
 }))(InputBase);
 
-function Register({ workshop, workshops, handleClose }) {
+const workshops = [
+  {
+    name: "Machine Learning with Python",
+    content: "11th,Sept 2021",
+    delay: "200",
+    image: "ML.jpg",
+    // gForm : ""
+  },
+  {
+    name: "Full Stack Web Development",
+    content: "11th,Sept 2021",
+    delay: "400",
+    image: "web.jpg",
+    // gForm : ""
+  },
+  {
+    name: "Product & UI/UX design",
+    content: "11th,Sept 2021",
+    delay: "600",
+    image: "ui.jpg",
+    // gForm : "http://tinyurl.com/techvantoacademyworkshop"
+  },
+
+  // {
+  //   name: "Automobile",
+  //   content: "11th,Sept 2021",
+  //   delay: "600",
+  //   image: "Automobile.jpg",
+  //   // gForm : "http://tinyurl.com/techvantoacademyworkshop"
+  // },
+  {
+    name: "Embedded Systems with Robotics & IoT",
+    content: "11th,Sept 2021",
+    delay: "200",
+    image: "embd.jpg",
+    // gForm : "http://tinyurl.com/techvantoacademyworkshop"
+  },
+  {
+    name: "Cyber Security and Ethical Hacking",
+    content: "11th,Sept 2021",
+    delay: "400",
+    image: "cyber.jpg",
+    // gForm : "http://tinyurl.com/techvantoacademyworkshop"
+  },
+  {
+    name: "Mechatronics with Advanced Study",
+    content: "11th,Sept 2021",
+    delay: "600",
+    image: "mechatronics.jpg",
+    // gForm : ""
+  },
+  {
+    name: "CPM (Construction Project Management)",
+    content: "11th,Sept 2021",
+    delay: "200",
+    image: "cpm.jpg",
+    // gForm : "http://tinyurl.com/techvantoacademyworkshop"
+  },
+  // {
+  //   name: "Ethical Hacking",
+  //   content: "11th,Sept 2021",
+  //   delay: "600",
+  //   image: "ethical.jpg",
+  //   // gForm : "http://tinyurl.com/techvantoacademyworkshop"
+  // },
+];
+
+function Register({ workshop, handleClose }) {
+  const workshops = [
+    {
+      name: "Machine Learning with Python",
+      content: "11th,Sept 2021",
+      delay: "200",
+      image: "ML.jpg",
+      // gForm : ""
+    },
+    {
+      name: "Full Stack Web Development",
+      content: "11th,Sept 2021",
+      delay: "400",
+      image: "web.jpg",
+      // gForm : ""
+    },
+    {
+      name: "Product & UI/UX design",
+      content: "11th,Sept 2021",
+      delay: "600",
+      image: "ui.jpg",
+      // gForm : "http://tinyurl.com/techvantoacademyworkshop"
+    },
+
+    // {
+    //   name: "Automobile",
+    //   content: "11th,Sept 2021",
+    //   delay: "600",
+    //   image: "Automobile.jpg",
+    //   // gForm : "http://tinyurl.com/techvantoacademyworkshop"
+    // },
+    {
+      name: "Embedded Systems with Robotics & IoT",
+      content: "11th,Sept 2021",
+      delay: "200",
+      image: "embd.jpg",
+      // gForm : "http://tinyurl.com/techvantoacademyworkshop"
+    },
+    {
+      name: "Cyber Security and Ethical Hacking",
+      content: "11th,Sept 2021",
+      delay: "400",
+      image: "cyber.jpg",
+      // gForm : "http://tinyurl.com/techvantoacademyworkshop"
+    },
+    {
+      name: "Mechatronics with Advanced Study",
+      content: "11th,Sept 2021",
+      delay: "600",
+      image: "mechatronics.jpg",
+      // gForm : ""
+    },
+    {
+      name: "CPM (Construction Project Management)",
+      content: "11th,Sept 2021",
+      delay: "200",
+      image: "cpm.jpg",
+      // gForm : "http://tinyurl.com/techvantoacademyworkshop"
+    },
+    // {
+    //   name: "Ethical Hacking",
+    //   content: "11th,Sept 2021",
+    //   delay: "600",
+    //   image: "ethical.jpg",
+    //   // gForm : "http://tinyurl.com/techvantoacademyworkshop"
+    // },
+  ];
+
   const classes = useStyles();
   const theme = useTheme();
 
@@ -76,7 +215,7 @@ function Register({ workshop, workshops, handleClose }) {
     name: "",
     email: "",
     phoneNumber: "",
-    workshop: workshop.name,
+    workshop: workshop ? workshop.name : "Machine Learning with Python",
     college: "",
     branch: "",
     year: "",
@@ -524,17 +663,25 @@ function Register({ workshop, workshops, handleClose }) {
                     </div>
                   </div>
                 </div>
-                <div className="input-group">
-                  <div className="col-2">
-                    <div className="input-group">
-                      <label className="label">Workshop Selected</label>
-                      <input
-                        className="input--style-4"
-                        type="text"
-                        name="text"
-                        value={workshop.name}
-                        disabled
-                      />
+                <div>
+                  <div className="row row-space">
+                    <div className="col-2">
+                      <div className="input-group">
+                        <label className="label">Select workshop</label>
+                        <select
+                          name="workshop"
+                          onChange={handleChange}
+                          value={values.workshop}
+                          className="input--style-4"
+                          style={{ padding: "10px", border: "none" }}
+                        >
+                          {workshops.map((workshop, index) => (
+                            <option value={workshop.name} key={index}>
+                              {workshop.name}
+                            </option>
+                          ))}
+                        </select>
+                      </div>
                     </div>
                   </div>
                 </div>

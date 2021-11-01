@@ -157,10 +157,34 @@ const FeaturesTiles = ({
                 />
               );
             })}
-            <div>
+            <div
+              style={{ textAlign: "center" }}
+              className="split-item-content center-content-mobile reveal-from-top"
+            >
               <h5>
                 Total fee INR 2999/- Pay in installments| Book your seat now
                 with just @ Rs. 499/- only.
+              </h5>
+              <h5
+                style={{
+                  fontWeight: "400",
+                  fontSize: "18px",
+                  color: "#bab8b8",
+                }}
+              >
+                <b>Eligibility Criteria:</b> For All graduates, Diploma, Btech,
+                engineering & other all interested students & professionals.
+              </h5>
+              <h5
+                style={{
+                  fontWeight: "400",
+                  fontSize: "18px",
+                  color: "#bab8b8",
+                }}
+              >
+                <b>Note:</b> Mechatronics with advanced study is for Mechanical
+                and Mechatronics students and CPM is for Civil and Civil
+                management students
               </h5>
             </div>
             <Modal handleClose={handleClose} show={show}>

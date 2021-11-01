@@ -50,7 +50,7 @@ const WorkshopCard = ({ workshop, handleOpen, className }) => {
                 }}
               >
                 <BiCalendar style={{ marginLeft: "5px", marginRight: "5px" }} />{" "}
-                Batch 1 : December,2021
+                Batch 1 : 16th Dec'21
               </p>
               <p
                 style={{
@@ -61,7 +61,7 @@ const WorkshopCard = ({ workshop, handleOpen, className }) => {
                 }}
               >
                 <BiCalendar style={{ marginLeft: "5px", marginRight: "5px" }} />{" "}
-                Batch 2 : January,2022
+                Batch 2 : 2nd Jan'22
               </p>
             </div>
             <div style={{ display: "flex", flexFlow: "column" }}>

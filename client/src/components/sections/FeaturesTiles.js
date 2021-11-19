@@ -16,6 +16,7 @@ const workshops = [
     content: "11th,Sept 2021",
     delay: "200",
     image: "ML.jpg",
+    link: "https://drive.google.com/file/d/17BVsWCP3F0KeUCifX2wiiDcl9oALkAEs/view?usp=sharing",
     // gForm : ""
   },
   {
@@ -23,6 +24,7 @@ const workshops = [
     content: "11th,Sept 2021",
     delay: "400",
     image: "web.jpg",
+    link: "https://drive.google.com/file/d/1HDEJa6m3p_9AmeLy-LJDAHXAlxJ1wI7g/view?usp=sharing",
     // gForm : ""
   },
   {
@@ -30,6 +32,7 @@ const workshops = [
     content: "11th,Sept 2021",
     delay: "600",
     image: "ui.jpg",
+    link: "https://drive.google.com/file/d/1kiYFM1RYXlMW6n2lPiU7IHz_gB4EPcs7/view?usp=sharing",
     // gForm : "http://tinyurl.com/techvantoacademyworkshop"
   },
 
@@ -45,6 +48,7 @@ const workshops = [
     content: "11th,Sept 2021",
     delay: "200",
     image: "embd.jpg",
+    link: "https://drive.google.com/file/d/1s8QyWtJ7Z51HN-NRmp8WOb0IchNpzEKW/view?usp=sharing",
     // gForm : "http://tinyurl.com/techvantoacademyworkshop"
   },
   {
@@ -52,6 +56,7 @@ const workshops = [
     content: "11th,Sept 2021",
     delay: "400",
     image: "cyber.jpg",
+    link: "https://drive.google.com/file/d/1s8QyWtJ7Z51HN-NRmp8WOb0IchNpzEKW/view?usp=sharing",
     // gForm : "http://tinyurl.com/techvantoacademyworkshop"
   },
   {
@@ -59,6 +64,7 @@ const workshops = [
     content: "11th,Sept 2021",
     delay: "600",
     image: "mechatronics.jpg",
+    link: "https://drive.google.com/file/d/1ERnC7dEcz16yAfYUJ3AqtUnMQPp2Qyh4/view?usp=sharing",
     // gForm : ""
   },
   {
@@ -66,6 +72,7 @@ const workshops = [
     content: "11th,Sept 2021",
     delay: "200",
     image: "cpm.jpg",
+    link: "https://drive.google.com/file/d/1WIR8_4yusuEFEizRW1oMyG1pJ_VKN_D9/view?usp=sharing",
     // gForm : "http://tinyurl.com/techvantoacademyworkshop"
   },
   // {

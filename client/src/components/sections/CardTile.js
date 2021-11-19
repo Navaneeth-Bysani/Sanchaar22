@@ -89,12 +89,32 @@ const WorkshopCard = ({ workshop, handleOpen, className }) => {
               </p>
             </div>
           </div>
+
+          <div>
+            <span className="testimonial-item-link">
+              <a
+                tag="a"
+                color="dark"
+                wideMobile
+                style={{
+                  marginBottom: 0,
+                  fontSize: "16px",
+                  cursor: "pointer",
+                  background: "none",
+                  color: "#178f37",
+                  fontWeight: "600",
+                }}
+                href={workshop.link}
+                // alt="Link"
+                target="_blank"
+              >
+                Know More
+              </a>
+            </span>
+          </div>
         </div>
 
-        <div
-          className="testimonial-item-footer text-xs mt-32 mb-0 has-top-divider"
-          // style={{ bottom: "10px" }}
-        >
+        <div className="testimonial-item-footer text-xs mt-32 mb-0 has-top-divider">
           <span className="testimonial-item-link">
             <Button tag="a" color="dark" wideMobile onClick={handleOpen}>
               Register

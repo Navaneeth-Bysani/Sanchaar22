@@ -48,7 +48,7 @@ const workshops = [
     content: "11th,Sept 2021",
     delay: "200",
     image: "embd.jpg",
-    link: "https://drive.google.com/file/d/1s8QyWtJ7Z51HN-NRmp8WOb0IchNpzEKW/view?usp=sharing",
+    link: "https://drive.google.com/file/d/1OlQAHnsgwScAgSS9sAsZ0M6m2nVTE-dH/view?usp=sharing",
     // gForm : "http://tinyurl.com/techvantoacademyworkshop"
   },
   {

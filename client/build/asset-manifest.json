@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.35c5b1a4.chunk.css",
-    "main.js": "/static/js/main.ecfa3e41.chunk.js",
-    "main.js.map": "/static/js/main.ecfa3e41.chunk.js.map",
+    "main.js": "/static/js/main.6ccc5e46.chunk.js",
+    "main.js.map": "/static/js/main.6ccc5e46.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.1e1db0f9.js",
     "runtime-main.js.map": "/static/js/runtime-main.1e1db0f9.js.map",
-    "static/js/2.6979cc86.chunk.js": "/static/js/2.6979cc86.chunk.js",
-    "static/js/2.6979cc86.chunk.js.map": "/static/js/2.6979cc86.chunk.js.map",
+    "static/js/2.40d07a8c.chunk.js": "/static/js/2.40d07a8c.chunk.js",
+    "static/js/2.40d07a8c.chunk.js.map": "/static/js/2.40d07a8c.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.f4e955d060ef8be0116ca8f20ccdf9b8.js": "/precache-manifest.f4e955d060ef8be0116ca8f20ccdf9b8.js",
+    "precache-manifest.8c8ab9335ccb5902cdba28c97e6acb86.js": "/precache-manifest.8c8ab9335ccb5902cdba28c97e6acb86.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.35c5b1a4.chunk.css.map": "/static/css/main.35c5b1a4.chunk.css.map",
-    "static/js/2.6979cc86.chunk.js.LICENSE.txt": "/static/js/2.6979cc86.chunk.js.LICENSE.txt",
+    "static/js/2.40d07a8c.chunk.js.LICENSE.txt": "/static/js/2.40d07a8c.chunk.js.LICENSE.txt",
     "static/media/Automobile.jpg": "/static/media/Automobile.78f3b759.jpg",
     "static/media/Brand.jpg": "/static/media/Brand.3ba22817.jpg",
     "static/media/Brand.png": "/static/media/Brand.80c661ce.png",
@@ -22,6 +22,7 @@
     "static/media/Screenshot (149).png": "/static/media/Screenshot (149).af1cedeb.png",
     "static/media/cer.jpeg": "/static/media/cer.bd830c88.jpeg",
     "static/media/cert.jpg": "/static/media/cert.f57242f1.jpg",
+    "static/media/certificate.jpg": "/static/media/certificate.ecbe1c15.jpg",
     "static/media/certificate1.jpeg": "/static/media/certificate1.96f434e8.jpeg",
     "static/media/cpm.jpg": "/static/media/cpm.19868654.jpg",
     "static/media/style.scss": "/static/media/illustration-section-02.63d0555d.svg",
@@ -67,8 +68,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.1e1db0f9.js",
-    "static/js/2.6979cc86.chunk.js",
+    "static/js/2.40d07a8c.chunk.js",
     "static/css/main.35c5b1a4.chunk.css",
-    "static/js/main.ecfa3e41.chunk.js"
+    "static/js/main.6ccc5e46.chunk.js"
   ]
 }

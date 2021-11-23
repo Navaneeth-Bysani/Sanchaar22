@@ -72,7 +72,7 @@ const Hero = ({
               data-reveal-delay="200"
             >
               <span className="text-color-primary">
-                Winter Internship & Traning Program
+                Winter Internship & Training Program
               </span>
             </h1>
           </div>

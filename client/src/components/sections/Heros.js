@@ -73,7 +73,7 @@ const FeaturesSplit = ({
                         data-reveal-delay="200"
                       >
                         <span className="text-color-primary">
-                          Winter Traning Program
+                          Winter Training Program
                         </span>
                       </h1>
                     </div>

@@ -81,7 +81,7 @@ const FeaturesSplit = ({
                 duration="400"
               >
                 <Image
-                  src={require("./../../assets/images/certificate1.jpeg")}
+                  src={require("./../../assets/images/certificate.jpg")}
                   alt="Features split 03"
                   width={520}
                   height={320}

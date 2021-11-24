@@ -89,6 +89,18 @@ const FeaturesSplit = ({
                 />
               </div>
             </div>
+
+            <div
+              style={{ textAlign: "center" }}
+              className="split-item-content center-content-mobile reveal-from-bottom"
+            >
+              <h5 style={{ color: "black", fontSize: "16px" }}>
+                It’s a <b style={{ color: "green" }}>Certified Program.</b>{" "}
+                Certificate will be given to all participants as per their
+                requirement. Like: 2/4/6/8 Weeks or as per their college
+                requirement.
+              </h5>
+            </div>
           </div>
         </div>
       </div>

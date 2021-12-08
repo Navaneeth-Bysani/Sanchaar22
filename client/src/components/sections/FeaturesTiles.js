@@ -191,7 +191,7 @@ const FeaturesTiles = ({
                     margin: "20px",
                   }}
                   onClick={() => {
-                    window.location.replace("https://pages.razorpay.com/witp2");
+                    window.location.assign("https://pages.razorpay.com/witp2");
                   }}
                 >
                   Second Installment

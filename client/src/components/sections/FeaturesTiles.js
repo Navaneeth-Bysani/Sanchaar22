@@ -9,6 +9,7 @@ import Input from "../elements/Input";
 import Register from "./Register";
 import FormHint from "../elements/FormHint";
 import { set } from "react-ga";
+import Button from "../elements/Button";
 
 const workshops = [
   {
@@ -171,6 +172,30 @@ const FeaturesTiles = ({
               <h5>
                 Total fee INR 2999/- Pay in installments| Book your seat now
                 with just @ Rs. 499/- only.
+              </h5>
+              <h5
+                style={{
+                  fontWeight: "400",
+                  fontSize: "18px",
+                  color: "#5ba6d9",
+                }}
+              >
+                <b>
+                  If you have paid 1st installment, then proceed with 2nd
+                  installment
+                </b>
+                <Button
+                  color="primary"
+                  variant="contained"
+                  style={{
+                    margin: "20px",
+                  }}
+                  onClick={() => {
+                    window.location.replace("https://pages.razorpay.com/witp2");
+                  }}
+                >
+                  Second Installment
+                </Button>
               </h5>
               <h5
                 style={{

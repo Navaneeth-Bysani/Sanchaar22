@@ -276,7 +276,7 @@ function Register({ workshop, handleClose }) {
   };
 
   const handleConfirm = () => {
-    window.location.href = "http://pages.razorpay.com/witp";
+    window.location.href = "https://pages.razorpay.com/witp";
 
     setShowConfirm(false);
     setRegistered(false);

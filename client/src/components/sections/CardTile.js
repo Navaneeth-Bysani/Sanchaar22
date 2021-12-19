@@ -50,17 +50,6 @@ const WorkshopCard = ({ workshop, handleOpen, className }) => {
                 }}
               >
                 <BiCalendar style={{ marginLeft: "5px", marginRight: "5px" }} />{" "}
-                Batch 1 : 16th Dec'21
-              </p>
-              <p
-                style={{
-                  display: "flex",
-                  color: "#6185b0",
-                  fontSize: "14px",
-                  marginBottom: "0px",
-                }}
-              >
-                <BiCalendar style={{ marginLeft: "5px", marginRight: "5px" }} />{" "}
                 Batch 2 : 2nd Jan'22
               </p>
             </div>

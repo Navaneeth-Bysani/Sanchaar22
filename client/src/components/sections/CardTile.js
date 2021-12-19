@@ -47,6 +47,7 @@ const WorkshopCard = ({ workshop, handleOpen, className }) => {
                   color: "#6185b0",
                   fontSize: "14px",
                   marginBottom: "0px",
+                  marginTop: "15px",
                 }}
               >
                 <BiCalendar style={{ marginLeft: "5px", marginRight: "5px" }} />{" "}
